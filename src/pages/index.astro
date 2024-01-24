@@ -1,0 +1,20 @@
+---
+import Header1 from "../components/LandingHeader.astro";
+import Layout from "../layouts/Layout.astro";
+import SolutionSection from "../components/SolutionSection.astro";
+import FeaturesSection from "../components/FeaturesSection.astro";
+import HeroSection from "../components/HeroSection.astro";
+import WhyCacta from "../components/WhyCacta.astro";
+---
+
+<Layout title="Welcome to Cacta Eco" />
+<Header1 />
+<main
+	class="snap-y snap-mandatory relative w-full h-screen overflow-y-auto overflow-hidden scroll-auto">
+	<div class="snap-center"><HeroSection /></div>
+	<div class="snap-center"><SolutionSection /></div>
+	<div class="snap-center"><FeaturesSection /></div>
+	<div class="snap-center"><WhyCacta /></div>
+</main>
+
+<style></style>

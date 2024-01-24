@@ -1,0 +1,117 @@
+---
+import { Image } from "astro:assets";
+import tractor from "../img/irrigator.jpg";
+
+import icon from "../icons/info.svg";
+---
+
+<section
+	class="w-screen h-screen text-center bg-black/90 relative overflow-hidden text-black z-40 flex justify-end items-center"
+	data-header-color="black"
+	id="why-cacta">
+	<article
+		class="z-50 absolute m-auto top-0 bottom-0 w-full md:w-1/2
+		flex items-start justify-center flex-col">
+		<aside class="px-8 md:p-0 text-start">
+			<h5>
+				<span class="text-3xl font-bold text-white b-10">Solución</span>
+			</h5>
+			<h6 class="text-2xl font-semibold tracking-tight text-white">
+				Gestionar la <span>sostenibilidad</span>
+				nunca fue tan fácil.
+			</h6>
+			<p
+				class="font-normal text-xl text-white py-1 text-pretty max-w-[75ch]">
+				Alcanza tus objetivos sin complicaciones. Recopila y analiza
+				automáticamente tus datos desde resúmenes por establecimiento o
+				evaluaciones de rendimiento por KPIs de manera sencilla.
+			</p>
+		</aside>
+		<div class="bullets-container mt-6">
+			<ol
+				class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center content-center h-full text-start">
+				<li class="bullet-item p-0 md:p-4">
+					<img src={icon.src} alt={`icon-"${icon}`} />
+					<p>
+						Conexión 100% automatizada al sistema de gestión del
+						cliente a través de API desarrolladas.
+					</p>
+				</li>
+				<li class="bullet-item p-0 md:p-4">
+					<img src={icon.src} alt={`icon-"${icon}`} />
+
+					<p>
+						Algoritmo que tipifica bajo más de 70.000 emisiones
+						registradas y 27.000 datos de actividad.
+					</p>
+				</li>
+				<li class="bullet-item p-0 md:p-4">
+					<img src={icon.src} alt={`icon-"${icon}`} />
+
+					<p>
+						Único software en Latinoamérica y Sudamérica bajo
+						metodología “LCA”.
+					</p>
+				</li>
+				<li class="bullet-item p-0 md:p-4">
+					<img src={icon.src} alt={`icon-"${icon}`} />
+
+					<p>Solución certificada, precisa y confiable.</p>
+				</li>
+				<li class="bullet-item p-0 md:p-4">
+					<img src={icon.src} alt={`icon-"${icon}`} />
+
+					<p>Paneles e informes automatizados.</p>
+				</li>
+				<li class="bullet-item p-0 md:p-4">
+					<img src={icon.src} alt={`icon-"${icon}`} />
+
+					<p>Paneles e informes automatizados.</p>
+				</li>
+			</ol>
+		</div>
+	</article>
+	<!-- video -->
+	<div class="absolute bottom-0 top-0 h-screen w-full">
+		<Image class="bg-image1" src={tractor} alt="Image of tractor" />
+	</div>
+</section>
+
+<style>
+	span {
+		color: #4daa57;
+		font-weight: 800;
+	}
+	.bg-image1 {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		mask: radial-gradient(circle at left, white 10%, transparent 100%);
+	}
+	.bullets-container {
+		min-height: 344px;
+		width: 100%;
+		background: linear-gradient(-135deg, transparent 0%, #4daa57 300%);
+		border-left: #4daa57 0.25rem solid;
+		border-bottom: #4daa57 0.25rem solid;
+		border-radius: 0.25rem;
+	}
+	.bullet-item {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		/* padding: 1rem; */
+	}
+
+	.bullet-item > p {
+		color: white;
+		font-weight: 500;
+		font-size: 1rem;
+		text-wrap: pretty;
+	}
+	.bullet-item > img {
+		height: 1.5rem;
+		margin-right: 1rem;
+	}
+</style>

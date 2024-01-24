@@ -1,0 +1,46 @@
+.card {
+	transition: all 0.3s ease-in-out;
+   min-width: 500px;
+	max-height: 300px;
+	margin: 0 auto;
+	border-radius: 0.25rem;
+	background-color: #fafafa;
+	text-align: center;
+	scroll-snap-align: start;
+	padding: 0.5rem;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.card > img {
+	aspect-ratio: 1/1;
+	object-fit: cover;
+	border-radius: 0.25rem;
+}
+
+.card:hover {
+	z-index: 1;
+}
+
+.cards-container {
+	gap: 1rem;
+	--sb-track-color: rgba(0, 0, 0, 0.2);
+	--sb-thumb-color: var(--gradient-bg3);
+	--sb-size: 1px;
+
+	scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+.cards-container::-webkit-scrollbar {
+	width: var(--sb-size);
+	height: 0.25rem;
+}
+
+.cards-container::-webkit-scrollbar-track {
+	background: var(--sb-track-color);
+	border-radius: 2px;
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+	background: var(--sb-thumb-color);
+	border-radius: 2px;
+}

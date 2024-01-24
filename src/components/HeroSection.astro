@@ -1,0 +1,69 @@
+---
+import video from "../video/farm-video1.mp4";
+---
+
+<section
+	class="w-screen h-screen text-center bg-black/90 relative overflow-hidden text-white z-40"
+	data-header-color="white">
+	<div
+		class="z-50 absolute m-auto top-0 bottom-0 flex flex-col items-center justify-center w-full md:w-1/2">
+		<header class="text-start">
+			<h1 class="text-white text-4xl font-bold">
+				Cacta-Eco <br />
+				<span class="text-8xl font-bold">Software</span>
+			</h1>
+			<h2 class="text-white text-4xl font-bold">
+				<p>El <span class="text-5xl font-bold">futuro</span></p>de tu
+				negocio
+
+				<p class="text-xl">y de la industria primaria.</p>
+			</h2>
+
+			<div class="mt-10">
+				<p class="text-white text-2xl font-semibold flex items-center">
+					Automatiza {">"} Calcula {">"} Reporta
+				</p>
+				<p class="text-white text-2xl font-bold">
+					<span>El impacto ambiental de tu empresa.</span>
+				</p>
+			</div>
+		</header>
+	</div>
+
+	<!-- <footer
+		class="absolute text-md font-semibold m-auto right-0 left-0 inline-block bottom-10 z-40">
+		<a
+			class="p-2 rounded px-6 py-2 backdrop-blur-md bg-white/20 hover:bg-white hover:text-white"
+			href="#">
+			Comienza Gratis</a
+		>
+	</footer> -->
+
+	<!-- video -->
+	<div class="absolute bottom-0 top-0 h-screen w-full">
+		<video
+			class="object-cover w-full h-full bg-image"
+			autoplay
+			loop
+			muted
+			src={video}></video>
+
+		<!-- <Image
+			class="object-cover w-full h-full bg-image"
+			src={tractor}
+			alt="Image of tractor"
+		/> -->
+	</div>
+</section>
+
+<style>
+	span {
+		color: var(--color-subtitle);
+	}
+	.bg-image {
+		width: 100%;
+		height: 100vh;
+		object-fit: cover;
+		mask: radial-gradient(circle at right, white 30%, transparent 100%);
+	}
+</style>

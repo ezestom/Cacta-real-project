@@ -1,0 +1,49 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/logo.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	@import url("https://fonts.googleapis.com/css2?family=Inter&family=MedievalSharp&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+	:root {
+		font-family: "Inter", sans-serif;
+		font-family: "MedievalSharp", cursive;
+		font-family: "Poppins", sans-serif;
+
+		--color-bg: #fbfbfb;
+		--color-title: #1e1e1ee6;
+		--color-subtitle: #4daa57;
+		--color-text: #3d3d4e;
+		--color-text-light: #6e6d7a;
+		--gradient-bg1: linear-gradient(220.55deg, #97e8b5 0%, #5cb67f 100%);
+		--gradient-bg2: linear-gradient(220.55deg, #00b960 0%, #00552c 100%);
+		--gradient-bg3: linear-gradient(220.55deg, #61c695 0%, #133114 100%);
+
+		/* cacta colours */
+
+		--color-cacta-green: #05ffa1;
+		--color-cacta-dark: #171f25;
+		--color-cacta-red: #ec363c;
+	}
+	html {
+		scroll-behavior: smooth;
+	}
+</style>
