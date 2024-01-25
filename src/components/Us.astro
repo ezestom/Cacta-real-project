@@ -1,0 +1,117 @@
+---
+import { Image } from "astro:assets";
+import tractor from "../img/farm2.jpg";
+
+import icon from "../icons/info.svg";
+---
+
+<section
+	class="w-screen h-screen text-center bg-black/90 relative overflow-hidden text-black z-40 flex justify-start items-center"
+	data-header-color="black"
+	id="us">
+	<article
+		class="z-50 absolute m-auto top-0 bottom-0 w-full md:w-1/2
+		flex items-start justify-center flex-col mx-8">
+		<aside class="text-start">
+			<h5>
+				<span class="text-3xl font-bold text-white">Nosotros</span>
+			</h5>
+			<h6
+				class="text-2xl font-semibold tracking-tight text-white text-balance">
+				Nuestra <span>filosofía</span>
+				se basa en la <span>innovación</span> y la <span
+					>tecnología</span
+				> del agro.
+			</h6>
+		</aside>
+		<!-- <aside class="px-8  text-start">
+			<h6 class="text-2xl font-semibold tracking-tight text-white">
+				Gestionar la <span>sostenibilidad</span>
+				nunca fue tan fácil.
+			</h6>
+			<p
+				class="font-normal text-xl text-white py-1 text-pretty max-w-[75ch]">
+				Alcanza tus objetivos sin complicaciones. Recopila y analiza
+				automáticamente tus datos desde resúmenes por establecimiento o
+				evaluaciones de rendimiento por KPIs de manera sencilla.
+			</p>
+		</aside> -->
+		<div class="description-container">
+			<p class="description-item">
+				Nos dedicamos apasionadamente todos los dias a impulsar a las
+				empresas a realizar una transformación hacia una gestión
+				sustentable.
+			</p>
+			<hr />
+			<p class="description-item">
+				¿Cómo? Con nuestras soluciones de alta tecnologia desarrolladas
+				bajo el mayor rigor académico y validación cientiífica para que
+				las empresas puedan tomar decisiones informadas, reducir su
+				impacto ambiental y al mismo tiempo maximizar su eficiencia
+				operativa.
+			</p>
+			<hr />
+			<p class="description-item">
+				¿Por qué? Como equipo creemos que la sustentabilidad no solo es
+				un objetivo, sino una forma de hacer negocios que beneficia a
+				todas las partes involucradas.
+			</p>
+			<hr />
+			<p class="description-item">
+				Nuestro compromiso se extiende a colaborar estrechamente con
+				nuestros clientes, guiándolos hacia un futuro en donde la
+				tecnología y la responsabilidad ambiental convergen para generar
+				un impacto positivo duradero.
+			</p>
+		</div>
+	</article>
+	<!-- video -->
+	<div class="absolute bottom-0 top-0 h-screen w-full">
+		<Image class="bg-image1" src={tractor} alt="Image of tractor" />
+	</div>
+</section>
+
+<style>
+	hr {
+		margin-left: 2rem;
+		height: 1px;
+		width: 50ch;
+		border: none;
+		background: linear-gradient(
+			to right,
+			transparent 0%,
+			#4daa57 50%,
+			transparent 100%
+		);
+	}
+	span {
+		color: #4daa57;
+		font-weight: 800;
+	}
+	.bg-image1 {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		mask: radial-gradient(circle at right, white 10%, transparent 100%);
+	}
+	.description-container {
+		min-height: 344px;
+		width: 100%;
+		background: linear-gradient(-135deg, transparent 0%, #4daa57 300%);
+		border-left: #4daa57 0.1rem solid;
+		border-bottom: #4daa57 0.1rem solid;
+		border-radius: 0.25rem;
+		color: white;
+		text-align: start;
+		padding: 1rem 0;
+		text-wrap: pretty;
+	}
+
+	.description-item {
+		font-size: 1rem;
+		text-wrap: pretty;
+		padding: 0.5rem 2rem;
+		max-width: 75ch;
+	}
+</style>

@@ -1,0 +1,90 @@
+---
+import { Form } from "./Form/Form";
+import logo from "/public/logo.png";
+import twitter from "../icons/twitter.svg";
+import linkedin from "../icons/linkedin.svg";
+import youtube from "../icons/youtube.svg";
+import world from "../icons/world.svg";
+import { Image } from "astro:assets";
+import tractor from "../img/cow3.jpg";
+---
+
+<section
+	class="w-screen h-screen text-center bg-black/90 relative overflow-hidden text-black z-40 flex justify-center items-center"
+	data-header-color="black"
+	id="why-cacta">
+	<div
+		class="z-50 absolute m-auto top-0 bottom-0 w-full
+		flex items-start justify-center flex-col"
+		id="contact">
+		<div class="px-8 md:p-0 text-start">
+			<span class="text-1xl flex items-center gap-1"></span>
+			The all in one Esg Platform
+			<h5 class="text-2xl font-bold text-pretty flex flex-col">
+				Contact
+				<strong>Get in touch</strong>
+				If you have any questions, please contact us
+			</h5>
+		</div>
+
+		<Form client:visible />
+	</div>
+	<!-- footer -->
+	<footer
+		class="w-full my-5 flex gap-1 lg:justify-between justify-center -z-1 items-center flex-wrap footer">
+		<a
+			target="_blank"
+			href="https://ezestom.github.io/portfolio/"
+			class="transition">
+			<div class="flex flex-col items-center tracking-tighter">
+				<span>Created & Designed by</span>
+
+				<span class="flex items-center gap-1"
+					>Eze Stom <img
+						class=""
+						src={world.src}
+						alt="world-icon"
+					/></span
+				>
+			</div>
+		</a>
+		<p
+			class="flex items-center flex-col gap-1 text-center tracking-tighter">
+			<span class="flex items-center gap-1">
+				<img class="w-9" src={logo.src} alt="logo image" /> © 2024 Cacta-Eco.</span
+			>
+
+			<span>All rights reserved.</span>
+		</p>
+		<div class="flex gap-3">
+			<a target="_blank" href="https://www.linkedin.com/in/ezequielstom/">
+				<img class="transition" src={twitter.src} alt="twitter icon" />
+			</a>
+			<a target="_blank" href="https://www.linkedin.com/in/ezequielstom/">
+				<img class="transition" src={linkedin.src} alt="twitter icon" />
+			</a>
+			<a target="_blank" href="https://www.youtube.com/@ezequielstom6745">
+				<img class="transition" src={youtube.src} alt="twitter icon" />
+			</a>
+		</div>
+	</footer>
+	<!-- footer -->
+
+	<div class="absolute bottom-0 top-0 h-screen w-full">
+		<Image class="bg-image1" src={tractor} alt="Image of tractor" />
+	</div>
+</section>
+
+<style>
+	.footer {
+		position: absolute;
+		bottom: 0;
+		color: white;
+	}
+	.bg-image1 {
+		width: 100%;
+		object-fit: cover;
+		object-position: center;
+		mask: radial-gradient(circle at left, white 10%, transparent 100%);
+	}
+</style>

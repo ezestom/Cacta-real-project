@@ -14,7 +14,9 @@ import icon from "../icons/info.svg";
 		flex items-start justify-center flex-col">
 		<aside class="px-8 md:p-0 text-start">
 			<h5>
-				<span class="text-3xl font-bold text-white b-10">Solución</span>
+				<span class="text-3xl font-bold text-white b-10"
+					>¿Por qué Cacta?</span
+				>
 			</h5>
 			<h6 class="text-2xl font-semibold tracking-tight text-white">
 				Gestionar la <span>sostenibilidad</span>
@@ -27,44 +29,49 @@ import icon from "../icons/info.svg";
 				evaluaciones de rendimiento por KPIs de manera sencilla.
 			</p>
 		</aside>
-		<div class="bullets-container mt-6">
-			<ol
-				class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center content-center h-full text-start">
-				<li class="bullet-item p-0 md:p-4">
-					<img src={icon.src} alt={`icon-"${icon}`} />
+		<div class="bullets-container">
+			<ol class="grid grid-cols-1 items-center content-center h-full text-start">
+				<li class="bullet-item pl-4">
+					<span>1</span>
 					<p>
 						Conexión 100% automatizada al sistema de gestión del
 						cliente a través de API desarrolladas.
 					</p>
 				</li>
-				<li class="bullet-item p-0 md:p-4">
-					<img src={icon.src} alt={`icon-"${icon}`} />
+				<hr />
+
+				<li class="bullet-item pl-4">
+					<span>2</span>
 
 					<p>
 						Algoritmo que tipifica bajo más de 70.000 emisiones
 						registradas y 27.000 datos de actividad.
 					</p>
 				</li>
-				<li class="bullet-item p-0 md:p-4">
-					<img src={icon.src} alt={`icon-"${icon}`} />
+				<hr />
+				<li class="bullet-item pl-4">
+					<span>3</span>
 
 					<p>
 						Único software en Latinoamérica y Sudamérica bajo
 						metodología “LCA”.
 					</p>
 				</li>
-				<li class="bullet-item p-0 md:p-4">
-					<img src={icon.src} alt={`icon-"${icon}`} />
+				<hr />
+				<li class="bullet-item pl-4">
+					<span>4</span>
 
 					<p>Solución certificada, precisa y confiable.</p>
 				</li>
-				<li class="bullet-item p-0 md:p-4">
-					<img src={icon.src} alt={`icon-"${icon}`} />
+				<hr />
+				<li class="bullet-item pl-4">
+					<span>5</span>
 
 					<p>Paneles e informes automatizados.</p>
 				</li>
-				<li class="bullet-item p-0 md:p-4">
-					<img src={icon.src} alt={`icon-"${icon}`} />
+				<hr />
+				<li class="bullet-item pl-4">
+					<span>6</span>
 
 					<p>Paneles e informes automatizados.</p>
 				</li>
@@ -82,6 +89,18 @@ import icon from "../icons/info.svg";
 		color: #4daa57;
 		font-weight: 800;
 	}
+	hr {
+		margin-left: 2rem;
+		height: 1px;
+		width: 50ch;
+		border: none;
+		background: linear-gradient(
+			to right,
+			transparent 0%,
+			#4daa57 50%,
+			transparent 100%
+		);
+	}
 	.bg-image1 {
 		width: 100%;
 		height: 100%;
@@ -93,8 +112,8 @@ import icon from "../icons/info.svg";
 		min-height: 344px;
 		width: 100%;
 		background: linear-gradient(-135deg, transparent 0%, #4daa57 300%);
-		border-left: #4daa57 0.25rem solid;
-		border-bottom: #4daa57 0.25rem solid;
+		border-left: #4daa57 0.1rem solid;
+		border-bottom: #4daa57 0.1rem solid;
 		border-radius: 0.25rem;
 	}
 	.bullet-item {
@@ -102,6 +121,7 @@ import icon from "../icons/info.svg";
 		align-items: center;
 		justify-content: flex-start;
 		/* padding: 1rem; */
+		padding: .5rem 1rem
 	}
 
 	.bullet-item > p {
@@ -110,8 +130,10 @@ import icon from "../icons/info.svg";
 		font-size: 1rem;
 		text-wrap: pretty;
 	}
-	.bullet-item > img {
-		height: 1.5rem;
+	.bullet-item > span {
+		/* height: 1.5rem; */
 		margin-right: 1rem;
+		font-size: 1.5rem;
+		font-weight: 800;
 	}
 </style>

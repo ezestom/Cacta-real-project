@@ -6,28 +6,33 @@ import video from "../video/farm-video1.mp4";
 	class="w-screen h-screen text-center bg-black/90 relative overflow-hidden text-white z-40"
 	data-header-color="white">
 	<div
-		class="z-50 absolute m-auto top-0 bottom-0 flex flex-col items-center justify-center w-full md:w-1/2">
-		<header class="text-start">
-			<h1 class="text-white text-4xl font-bold">
-				Cacta-Eco <br />
-				<span class="text-8xl font-bold">Software</span>
-			</h1>
-			<h2 class="text-white text-4xl font-bold">
-				<p>El <span class="text-5xl font-bold">futuro</span></p>de tu
-				negocio
+		class="z-50 absolute m-auto top-0 bottom-0 flex flex-col items-center justify-center w-full md:w-1/2 ml-8">
+		<span class="block m-auto w-full h1">
+			<header class="">
+				<h1 class="text-white text-5xl font-bold">
+					Cacta-Eco <br />
+					<span class="text-8xl font-bold">Software</span>
+				</h1>
+				<h2 class="text-white text-4xl font-bold">
+					<p>
+						El <span class="text-5xl font-bold">futuro</span> de tu negocio
+					</p>
 
-				<p class="text-xl">y de la industria primaria.</p>
-			</h2>
+					<p class="text-xl">y de la industria primaria.</p>
+				</h2>
 
-			<div class="mt-10">
-				<p class="text-white text-2xl font-semibold flex items-center">
-					Automatiza {">"} Calcula {">"} Reporta
-				</p>
-				<p class="text-white text-2xl font-bold">
-					<span>El impacto ambiental de tu empresa.</span>
-				</p>
-			</div>
-		</header>
+				<div class="mt-5">
+					<p
+						class="text-white text-2xl font-semibold flex items-center">
+						Automatiza {">"} Calcula {">"} Reporta
+					</p>
+					<p class="text-white text-4xl font-bold">
+						<span>El impacto ambiental</span>
+					</p>
+					<p class="font-semibold text-xl">de tu empresa.</p>
+				</div>
+			</header>
+		</span>
 	</div>
 
 	<!-- <footer
@@ -60,10 +65,26 @@ import video from "../video/farm-video1.mp4";
 	span {
 		color: var(--color-subtitle);
 	}
+	.h1 {
+		padding: 1rem 0;
+		background: linear-gradient(-135deg, transparent 0%, #4daa57 600%);
+		border-left: #4daa57 0.1rem solid;
+		border-bottom: #4daa57 0.1rem solid;
+		border-radius: 0.25rem;
+		display: flex;
+		justify-content: center;
+	}
 	.bg-image {
 		width: 100%;
 		height: 100vh;
 		object-fit: cover;
 		mask: radial-gradient(circle at right, white 30%, transparent 100%);
+	}
+	header {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		border-radius: 0.25rem;
+		text-align: start;
 	}
 </style>

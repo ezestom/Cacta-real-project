@@ -1,0 +1,69 @@
+.form-container {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 1rem;
+	justify-items: center;
+	border-bottom: 1px solid var(--border-line);
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+	background: var(--gradient-bg);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	flex-wrap: wrap;
+}
+hr {
+	height: 2px;
+	width: 10ch;
+	border: none;
+	background: LinkText;
+	background: linear-gradient(
+			to bottom right in oklab,
+			oklch(70% 0.5 340),
+			oklch(90% 0.5 200)
+		)
+		fixed;
+}
+dialog {
+	position: fixed;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-items: center;
+	background: hsl(0 0% 0% / 0.1);
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(20px);
+}
+.form-container-dialog {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding: 2rem;
+	border-radius: 1rem;
+	background: hsl(0 0% 0% / 0.05);
+	flex-wrap: wrap;
+}
+
+input,
+textarea {
+	width: 100%;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	border: none;
+}
+textarea {
+	max-height: 10rem;
+	min-height: 5rem;
+}
+@media (width < 1200px) {
+	.form-container-dialog {
+		width: 95%;
+	}
+}

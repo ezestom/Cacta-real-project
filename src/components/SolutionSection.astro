@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import tractor from "../img/cow2.jpg";
 import { Card } from "../components/Card/Card";
 import app from "../img/app.png";
+import arrows from "../icons/arrows.svg";
 ---
 
 <section
@@ -20,7 +21,8 @@ import app from "../img/app.png";
 				Gestionar la <span>sostenibilidad</span>
 				nunca fue tan fácil.
 			</h6>
-			<p class="font-normal text-xl text-white py-1 text-pretty max-w-[75ch]">
+			<p
+				class="font-normal text-xl text-white py-1 text-pretty max-w-[75ch]">
 				Alcanza tus objetivos sin complicaciones. Recopila y analiza
 				automáticamente tus datos desde resúmenes por establecimiento o
 				evaluaciones de rendimiento por KPIs de manera sencilla.
@@ -57,6 +59,9 @@ import app from "../img/app.png";
 				description="Identifica de forma simple los principales contribuyentes de tu huella ambiental"
 				href="/data-collection"
 			/>
+		</div>
+		<div class="w-full grid items-center justify-center">
+			<img class="w-6" src={arrows.src} alt="icon-arrows" />
 		</div>
 		<!-- <footer
 		class="absolute text-md font-semibold m-auto right-0 left-0 inline-block bottom-10 z-40">
@@ -104,6 +109,9 @@ import app from "../img/app.png";
 		overflow-x: auto;
 		-webkit-overflow-scrolling: touch;
 		/* position: relative; */
-		border-left: #4daa57 0.25rem solid;
+		background: linear-gradient(-135deg, transparent 0%, #4daa57 300%);
+		border-left: #4daa57 0.1rem solid;
+		border-bottom: #4daa57 0.1rem solid;
+		border-radius: 0.25rem;
 	}
 </style>

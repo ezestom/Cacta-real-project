@@ -1,6 +1,9 @@
+.cards-container {
+	mask: radial-gradient(circle at left, white 50%, transparent 100%);
+}
 .card {
 	transition: all 0.3s ease-in-out;
-   min-width: 500px;
+	min-width: 500px;
 	max-height: 300px;
 	margin: 0 auto;
 	border-radius: 0.25rem;
@@ -19,6 +22,7 @@
 
 .card:hover {
 	z-index: 1;
+	cursor: grab;
 }
 
 .cards-container {
@@ -32,7 +36,7 @@
 
 .cards-container::-webkit-scrollbar {
 	width: var(--sb-size);
-	height: 0.25rem;
+	height: 0.1rem;
 }
 
 .cards-container::-webkit-scrollbar-track {
