@@ -8,30 +8,30 @@ export function Form() {
 	const openDialog = () => {
 		setDialog(true);
 		// hacer funcion para bloquear scroll
-		document.body.style.overflow = "hidden";
+		// document.body.style.overflow = "hidden";
 	};
 
 	const closeDialog = () => {
 		setDialog(false);
 		// hacer funcion para desbloquear scroll
-		document.body.style.overflow = "auto";
+		// document.body.style.overflow = "auto";
 	};
 
 	return (
-		<div className="relative form-container w-full md:w-1/2 z-10">
-			<span className="w-full flex opacity-20 justify-end font-semibold">
-				Contact us
-			</span>
-			<h2 className="text-2xl font-bold">Ready to get started?</h2>
-			<hr />
-			<p>~ Join the waitlist</p>
-			<span className="absolute bottom-3 right-5">
+		<div className="relative form-container  z-10 text-white">
+			<h2 className="text-2xl font-bold">
+				{" "}
+				Estás preparado para comenzar?{" "}
+			</h2>
+			<hr className="hr-contact" />
+			<p>Sumate a la lista de espera</p>
+			<span className="flex pt-2">
 				<a
 					href="#open-dialog"
 					onClick={openDialog} // Usar la función openDialog aquí
 					id="open-dialog"
-					className="inline-flex items-center px-6 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 btn">
-					Get in touch
+					class="p-2 rounded  flex items-center justify-start  px-6 py-2 backdrop-blur-md bg-white/20 hover:bg-white hover:text-black text-center transition-all duration-300 ease-in-out  ">
+					Ponté en contacto
 					<svg
 						className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
 						aria-hidden="true"

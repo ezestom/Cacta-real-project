@@ -10,17 +10,21 @@ export function Card({
 	id,
 }) {
 	return (
-		<div class="card" id={id}>
-			<img src={imagePath} alt={altText} class="" />
+		<div className="card" id={id}>
+			<div className="card-container">
+				<img src={imagePath} alt={altText} className="" />
 
-			<div class="p-4 text-start  ">
-				<p class="font-normal text-gray-600 ">{preTitle}</p>
+				<div className="p-4 text-start  ">
+					<p className="font-normal text-gray-600 ">{preTitle}</p>
 
-				<h5 class=" text-xl font-bold tracking-tight text-gray-900">
-					{title}
-				</h5>
+					<h5 className=" text-xl font-bold tracking-tight text-gray-900">
+						{title}
+					</h5>
 
-				<p class=" font-normal text-sm text-pretty text-gray-800 ">{description}</p>
+					<p className=" font-normal text-sm text-pretty text-gray-800 ">
+						{description}
+					</p>
+				</div>
 			</div>
 		</div>
 	);

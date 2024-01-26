@@ -1,28 +1,24 @@
 .form-container {
-	display: flex;
-	flex-direction: column;
-	align-items: start;
-	gap: 1rem;
-	justify-items: center;
+	gap: 0.5rem;
 	border-bottom: 1px solid var(--border-line);
-	padding: 1rem 2rem;
-	border-radius: 1rem;
-	background: var(--gradient-bg);
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 2rem 0rem;
 	flex-wrap: wrap;
+	text-align: start;
 }
-hr {
-	height: 2px;
-	width: 10ch;
+.hr-contact {
+	/* margin-left: 2rem; */
+	height: 1px;
+	margin-bottom: 0.5rem;
+	width: 30ch;
 	border: none;
-	background: LinkText;
 	background: linear-gradient(
-			to bottom right in oklab,
-			oklch(70% 0.5 340),
-			oklch(90% 0.5 200)
-		)
-		fixed;
+		to right,
+		transparent 0%,
+		#4daa57 50%,
+		transparent 100%
+	);
 }
+
 dialog {
 	position: fixed;
 	top: 0;
@@ -30,10 +26,11 @@ dialog {
 	flex-direction: column;
 	align-items: center;
 	justify-items: center;
-	background: hsl(0 0% 0% / 0.1);
+	background-color: rgba(255, 255, 255, 0.1);
 	width: 100%;
 	height: 100%;
 	backdrop-filter: blur(20px);
+	z-index: 50;
 }
 .form-container-dialog {
 	position: relative;
@@ -47,8 +44,10 @@ dialog {
 	gap: 1rem;
 	padding: 2rem;
 	border-radius: 1rem;
-	background: hsl(0 0% 0% / 0.05);
+	background: hsl(0 0% 0% / 0.5);
 	flex-wrap: wrap;
+	z-index: 60;
+	color: white;
 }
 
 input,
