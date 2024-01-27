@@ -19,7 +19,7 @@ export function Form() {
 
 	return (
 		<div className="relative form-container  z-10 text-white">
-			<h2 className="text-2xl font-bold">
+			<h2 className="text-xl font-bold">
 				{" "}
 				Estás preparado para comenzar?{" "}
 			</h2>
@@ -31,7 +31,7 @@ export function Form() {
 					onClick={openDialog} // Usar la función openDialog aquí
 					id="open-dialog"
 					class="p-2 rounded  flex items-center justify-start  px-6 py-2 backdrop-blur-md bg-white/20 hover:bg-white hover:text-black text-center transition-all duration-300 ease-in-out  ">
-					Ponté en contacto
+					Ir al formulario
 					<svg
 						className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
 						aria-hidden="true"
@@ -77,10 +77,10 @@ export function Form() {
 								</a>
 							</legend>
 							<legend className="text-3xl font-semibold">
-								Get in touch and join the waitlist
+								Contáctame para unirme a la lista de espera
 							</legend>
 							<div className="flex flex-col gap-4">
-								<label htmlFor="name">Name:</label>
+								<label htmlFor="name">Nombre</label>
 								<input
 									type="text"
 									name="name"
@@ -89,7 +89,7 @@ export function Form() {
 									className="rounded-md "
 									required
 								/>
-								<label htmlFor="email">Email</label>
+								<label htmlFor="email">Correo</label>
 								<input
 									className="rounded-md "
 									type="email"
@@ -98,7 +98,7 @@ export function Form() {
 									placeholder="john_doe@example.com"
 									required
 								/>
-								<label htmlFor="message">Message</label>
+								<label htmlFor="message">Mensaje</label>
 								<textarea
 									name="message"
 									id="message"
@@ -107,7 +107,7 @@ export function Form() {
 								<button
 									className="w-full bg-white/20 rounded-md py-1 hover:bg-white/30"
 									type="submit">
-									Send
+									Enviar
 								</button>
 							</div>
 						</form>

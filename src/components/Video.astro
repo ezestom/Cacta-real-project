@@ -13,14 +13,17 @@ import { BlurVideo } from "./BlurVideo/BlurVideo";
 		flex flex-col content-container">
 		<aside class="text-start px-8">
 			<h5>
-				<span class="text-3xl font-bold text-white">Video</span>
+				<span class="text-2xl font-bold text-white">Inmersión</span>
 			</h5>
 			<hr />
-			<h6 class="text-2xl font-semibold text-white ">
-				<span>Mira</span> nuestro video y conoce más sobre nosotros.
+			<h6 class="text-xl font-semibold text-white">
+				Conocé nuestra<span> revolucionaria app</span> y sumergite en el
+				mundo <br /> de la <span> agricultura de precisión.</span>
 			</h6>
-			<p class="font-normal text-xl text-white text-pretty pb-4 max-w-[55ch]">
-				Alcanza tus objetivos sin complicaciones. 
+			<p class="font-normal text-white text-pretty pb-4 max-w-[55ch]">
+				La aplicación de AgroInteligencia te permite visualizar y
+				analizar los datos de tus cultivos de una manera simple y
+				eficiente.
 			</p>
 			<BlurVideo client:visible />
 		</aside>
@@ -35,7 +38,7 @@ import { BlurVideo } from "./BlurVideo/BlurVideo";
 		height: 100%;
 		object-fit: cover;
 		object-position: top;
-		mask: radial-gradient(circle at left, white 30%, transparent 100%);
+		mask: radial-gradient(circle at left, white 10%, transparent 100%);
 	}
 	hr {
 		/* margin-left: 2rem; */

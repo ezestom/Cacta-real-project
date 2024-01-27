@@ -14,16 +14,16 @@ import icon from "../icons/info.svg";
 		flex flex-col">
 		<aside class="px-8 md:p-0 text-start">
 			<h5>
-				<span class="text-3xl font-bold text-white"
+				<span class="text-2xl font-bold text-white"
 					>¿Por qué Cacta?</span
 				>
 			</h5>
 			<hr />
-			<h6 class="text-2xl font-semibold text-white">
+			<h6 class="text-xl font-semibold text-white">
 				Gestionar la <span>sostenibilidad</span>
 				nunca fue tan fácil.
 			</h6>
-			<p class="font-normal text-xl text-white text-pretty max-w-[55ch]">
+			<p class="font-normal text-white text-pretty max-w-[65ch]">
 				Alcanza tus objetivos sin complicaciones. Recopila y analiza
 				automáticamente tus datos desde resúmenes por establecimiento o
 				evaluaciones de rendimiento por KPIs de manera sencilla.
@@ -31,7 +31,9 @@ import icon from "../icons/info.svg";
 		</aside>
 		<div class="bullets-container">
 			<ol
-				class="grid grid-cols-1 items-center content-center h-full text-start px-2">
+				class="grid grid-cols-1 items-center content-center mt-2 h-full text-start px-2 md:px-0 max-w-[65ch]">
+				<hr class="hr-li" />
+
 				<li class="bullet-item pl-4">
 					<span>1</span>
 					<p>
@@ -76,6 +78,7 @@ import icon from "../icons/info.svg";
 
 					<p>Paneles e informes automatizados.</p>
 				</li>
+				<hr class="hr-li" />
 			</ol>
 		</div>
 	</article>
@@ -109,9 +112,9 @@ import icon from "../icons/info.svg";
 		width: 75ch;
 		border: none;
 		background: linear-gradient(
-			to right,
+			to left,
 			transparent 0%,
-			#4daa57 50%,
+			#4daa57 75%,
 			transparent 100%
 		);
 	}
@@ -132,7 +135,7 @@ import icon from "../icons/info.svg";
 		align-items: center;
 		justify-content: flex-start;
 		/* padding: 1rem; */
-		padding: 0.5rem 0rem;
+		padding: 0.25rem 0rem;
 	}
 
 	.bullet-item > p {

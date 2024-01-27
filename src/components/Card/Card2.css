@@ -8,18 +8,18 @@
 }
 .card {
 	min-width: 350px;
-	max-width: 500px;
+	max-width: 400px;
 	background-color: #f0f0f0;
 	border-radius: 0.5rem;
 	overflow: hidden;
 	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
 	transform: rotate(-3deg) translateX(10rem);
 	margin-left: -35%;
-	transition: all 0.3s ease-in-out;
+	transition: all 0.2s ease-in-out;
 	border-bottom: 0.5rem solid transparent;
 }
 .card:hover {
-	transform: rotate(0deg) scale(1.05) translateX(8rem);
+	transform: rotate(0deg) scale(1.05) translateX(7rem);
 	z-index: 2;
 	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 	border-bottom: 0.5rem solid #4daa57;
