@@ -14,7 +14,7 @@ export function Card({
 			<div className="card-container">
 				<img src={imagePath} alt={altText} className="" />
 
-				<div className="p-4 text-start  ">
+				<div className="p-2 text-start  ">
 					<p className="font-normal text-gray-600 ">{preTitle}</p>
 
 					<h5 className=" text-xl font-bold tracking-tight text-gray-900">

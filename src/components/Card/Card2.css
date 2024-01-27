@@ -3,26 +3,29 @@
 	display: flex;
 	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 	display: grid;
-	margin-top: 2rem;
+	margin-top: 1rem;
 	flex-wrap: wrap;
 }
 .card {
 	min-width: 350px;
 	max-width: 400px;
+	max-height: 400px;
 	background-color: #f0f0f0;
-	border-radius: 0.5rem;
+	border-radius: 0.25rem;
 	overflow: hidden;
 	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
-	transform: rotate(-3deg) translateX(10rem);
+	transform: translateX(10rem);
 	margin-left: -35%;
-	transition: all 0.2s ease-in-out;
-	border-bottom: 0.5rem solid transparent;
+	transition: all 0.3s ease-in-out;
+	border-bottom: 0.5rem solid rgb(182, 233, 182);
+	border-left: 0.25rem solid rgb(182, 233, 182);
 }
 .card:hover {
-	transform: rotate(0deg) scale(1.05) translateX(7rem);
+	transform: scale(1.02) translateX(8rem);
 	z-index: 2;
-	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
 	border-bottom: 0.5rem solid #4daa57;
+	border-left: 0.25rem solid #4daa57;
 	cursor: crosshair;
 }
 .card > img {

@@ -69,15 +69,15 @@ export function Form() {
 									{" "}
 									{/* Usar la función closeDialog aquí */}
 									<img
-										className="bg-black/10 rounded-xl p-1 hover:bg-black/20 transition "
+										className="bg-black/30 rounded-xl p-2 hover:bg-black/20 transition "
 										src={x.src}
 										alt="x-icon"
 										id="close-dialog"
 									/>
 								</a>
 							</legend>
-							<legend className="text-3xl font-semibold">
-								Contáctame para unirme a la lista de espera
+							<legend className="text-2xl font-normal">
+								Unirme a la lista de espera
 							</legend>
 							<div className="flex flex-col gap-4">
 								<label htmlFor="name">Nombre</label>
