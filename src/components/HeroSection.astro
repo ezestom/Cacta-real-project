@@ -1,5 +1,6 @@
 ---
 import video from "../video/farm-video1.mp4";
+import bg from "../icons/bg.svg";
 ---
 
 <section
@@ -9,6 +10,15 @@ import video from "../video/farm-video1.mp4";
 		class="z-50 absolute m-auto top-0 bottom-0 flex flex-col items-center justify-center w-full md:w-1/2">
 		<span class="block m-auto w-full h1">
 			<header class="header">
+				<!-- svg -->
+
+				<img
+					class="absolute left-0 bottom-0 h-screen brightness-200"
+					src={bg.src}
+					alt="bg svg"
+				/>
+
+				<!-- svg -->
 				<h1 class="text-white text-5xl md:text-6xl font-bold">
 					<strong class="font-semibold">Cacta~Eco</strong><br />
 					<span class="text-6xl md:text-7xl font-bold tracking-wider"
@@ -68,7 +78,7 @@ import video from "../video/farm-video1.mp4";
 	hr {
 		margin: auto;
 		padding: 0.1rem 0;
-		margin: .25rem 0;
+		margin: 0.25rem 0;
 		width: 100%;
 		border: none;
 		background: linear-gradient(

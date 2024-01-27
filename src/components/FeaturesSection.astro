@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import img from "../img/tractor4.jpg";
 import { Card } from "./Card/Card";
 import app from "../img/app.png";
+import bg from "../icons/bg.svg";
 ---
 
 <section
@@ -12,6 +13,13 @@ import app from "../img/app.png";
 	<article
 		class="z-20 top-0 md:pl-4 bottom-0 w-full md:w-1/2 h-full justify-center items-start
 		flex flex-col">
+		<!-- svg -->
+		<img
+			class="absolute left-0 top-0 h-screen brightness-200"
+			src={bg.src}
+			alt="bg svg"
+		/>
+		<!-- svg -->
 		<aside class="text-start px-8">
 			<h5>
 				<span class="text-2xl font-bold text-white"
@@ -23,7 +31,7 @@ import app from "../img/app.png";
 				Gestionar la <span>sostenibilidad</span>
 				nunca fue tan fácil.
 			</h6>
-			<p class="font-normal  text-white text-pretty max-w-[65ch]">
+			<p class="font-normal text-white text-pretty max-w-[65ch]">
 				Alcanza tus objetivos sin complicaciones. Recopila y analiza
 				automáticamente tus datos desde resúmenes por establecimiento o
 				evaluaciones de rendimiento por KPIs de manera sencilla.
