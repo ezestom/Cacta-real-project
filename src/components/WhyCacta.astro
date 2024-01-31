@@ -1,41 +1,39 @@
 ---
 import { Image } from "astro:assets";
 import tractor from "../img/irrigator.jpg";
-import bg from "../icons/bg.svg";
+import cloud from "../icons/cloud.svg";
 ---
 
 <section
 	class="w-screen h-screen text-center bg-black/90 overflow-hidden text-black flex justify-end items-start relative"
 	data-header-color="black"
 	id="why-cacta">
-	<article
-		class="z-20 top-0 bottom-0 w-full md:w-1/2 h-full justify-center items-start
-		flex flex-col">
-
-		<aside class="px-8 md:p-0 text-start">
-			<h5>
-				<span class="text-2xl font-bold text-white"
-					>¿Por qué Cacta?</span
-				>
-			</h5>
-			<hr />
-			<h6 class="text-xl font-semibold text-white">
-				Gestionar la <span>sostenibilidad</span>
-				nunca fue tan fácil.
-			</h6>
-			<p class="font-normal text-white text-pretty max-w-[65ch]">
-				Alcanza tus objetivos sin complicaciones. Recopila y analiza
-				automáticamente tus datos desde resúmenes por establecimiento o
-				evaluaciones de rendimiento por KPIs de manera sencilla.
-			</p>
-		</aside>
+	<article class="z-20 w-1/2 h-full flex items-center justify-center">
 		<div class="bullets-container">
+			<aside class="px-8 md:p-0 text-start">
+				<h5>
+					<span class="text-2xl font-bold text-white"
+						>¿Por qué Cacta?</span
+					>
+				</h5>
+				<hr />
+				<h6 class="text-xl font-semibold text-white">
+					Nuestra misión es: <span
+						>construir tu futuro bienestar,</span
+					> hoy.
+				</h6>
+				<p class="font-normal text-white text-pretty max-w-[55ch]">
+					Nuestro principal objetivo es que las empresas puedan tomar
+					decisiones informadas, reducir su impacto ambiental y al
+					mismo tiempo maximizar su eficiencia operativa
+				</p>
+			</aside>
 			<ol
-				class="grid grid-cols-1 items-center content-center mt-2 h-full text-start px-2 md:px-0 max-w-[65ch]">
+				class="grid grid-cols-1 items-center content-center mt-2 h-full text-start px-2 md:px-0 max-w-[55ch]">
 				<hr class="hr-li" />
 
 				<li class="bullet-item pl-4">
-					<span>1</span>
+					<img src={cloud.src} alt="icon" />
 					<p>
 						Conexión 100% automatizada al sistema de gestión del
 						cliente a través de API desarrolladas.
@@ -44,7 +42,7 @@ import bg from "../icons/bg.svg";
 				<hr class="hr-li" />
 
 				<li class="bullet-item pl-4">
-					<span>2</span>
+					<img src={cloud.src} alt="icon" />
 
 					<p>
 						Algoritmo que tipifica bajo más de 70.000 emisiones
@@ -53,7 +51,7 @@ import bg from "../icons/bg.svg";
 				</li>
 				<hr class="hr-li" />
 				<li class="bullet-item pl-4">
-					<span>3</span>
+					<img src={cloud.src} alt="icon" />
 
 					<p>
 						Único software en Latinoamérica y Sudamérica bajo
@@ -62,20 +60,18 @@ import bg from "../icons/bg.svg";
 				</li>
 				<hr class="hr-li" />
 				<li class="bullet-item pl-4">
-					<span>4</span>
+					<img src={cloud.src} alt="icon" />
 
 					<p>Solución certificada, precisa y confiable.</p>
 				</li>
 				<hr class="hr-li" />
 				<li class="bullet-item pl-4">
-					<span>5</span>
-
+					<img src={cloud.src} alt="icon" />
 					<p>Paneles e informes automatizados.</p>
 				</li>
 				<hr class="hr-li" />
 				<li class="bullet-item pl-4">
-					<span>6</span>
-
+					<img src={cloud.src} alt="icon" />
 					<p>Paneles e informes automatizados.</p>
 				</li>
 				<hr class="hr-li" />
@@ -109,7 +105,7 @@ import bg from "../icons/bg.svg";
 	.hr-li {
 		margin-left: 2rem;
 		height: 1px;
-		width: 75ch;
+		width: 50%;
 		border: none;
 		background: linear-gradient(
 			to left,
@@ -123,12 +119,20 @@ import bg from "../icons/bg.svg";
 		height: 100%;
 		object-fit: cover;
 		object-position: center;
-		mask: radial-gradient(circle at left, white 10%, transparent 100%);
+		mask: radial-gradient(circle at left, white 30%, transparent 100%);
 	}
 	.bullets-container {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+		color: white;
+		display: flex;
+		text-wrap: pretty;
+		max-width: 55ch;
+		backdrop-filter: blur(5px);
+		border-radius: 0.5rem;
+		padding: 0.5rem 1rem;
+		background-color: rgba(255, 255, 255, 0.1);
 	}
 	.bullet-item {
 		display: flex;
@@ -143,6 +147,7 @@ import bg from "../icons/bg.svg";
 		font-weight: 500;
 		font-size: 1rem;
 		text-wrap: pretty;
+		margin-left: .5rem;
 	}
 	.bullet-item > span {
 		margin-right: 1rem;

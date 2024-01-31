@@ -1,0 +1,22 @@
+---
+import { CardZoom } from "../components/CardZoom/CardZoom";
+import Layout from "../layouts/Layout.astro";
+
+import image2 from "../img/card2.jpg";
+---
+
+<Layout title="Eco Score" />
+
+<div
+	class="absolute inset-0 -z-10 h-full w-full bg-[#fafafa] bg-[linear-gradient(to_right,#f0f0f0_2px,transparent_2px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
+</div>
+
+<section class="w-screen md:h-screen h-full flex items-center justify-center">
+	<CardZoom
+		client:visible
+		image={image2.src}
+		preTitle="DATA COLLECTION"
+		title="ECO SCORE"
+		description="Un eco score o prueba de rendimiento proporciona una manera rápida y fácil de englobar el impacto ambietal de  una empresa. Por ejemplo, un producto con un alto eco score indica que tiene un menor impacto ambiental en comparación con otros productos similares con una puntuación más baja."
+	/>
+</section>

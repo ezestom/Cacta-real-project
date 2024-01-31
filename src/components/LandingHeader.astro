@@ -4,14 +4,14 @@ import logo from "/public/logo-blanco.png";
 
 <header
 	id="landing-header"
-	class="landing-section px-10 py-5 flex items-center absolute top-0 w-full justify-between z-50 text-white">
+	class="py-3 px-10 flex items-center fixed top-0 w-full justify-between z-50 text-white">
 	<span class="flex flex-grow basis-0">
 		<a href="/"><img class="w-16" src={logo.src} alt="cacta logo" /></a>
 	</span>
 
 	<nav class="hidden xl:block sm:hidden">
 		<ul
-			class="flex text-md [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-semibold [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
+			class="flex  [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
 			<li>
 				<a href="/">Inicio</a>
 			</li>
@@ -71,7 +71,7 @@ import logo from "/public/logo-blanco.png";
 	});
 </script>
 
-<!-- <script>
+<script>
 	const headerEl = document.querySelector("#landing-header") as HTMLElement;
 
 	const observerOptions = {
@@ -85,11 +85,11 @@ import logo from "/public/logo-blanco.png";
 			const { isIntersecting } = entry;
 			if (isIntersecting) {
 				const color = entry.target.getAttribute("data-header-color");
-				headerEl.style.color = color;
+				headerEl.stylele.color = color;
 			}
 		});
 	}, observerOptions);
 
-	const sectionElements = document.querySelectorAll(".landing-section");
-	sectionElements.forEach((section) => observer.observe(section));
-</script> -->
+	const sectionElement = document.getElementById("landing-section");
+	sectionElement && observer.observe(sectionElement);
+</script>

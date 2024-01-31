@@ -1,6 +1,6 @@
 import { useState } from "react";
 import youtube from "../../img/youtube.png";
-import video1 from "../../video/farm-video1.mp4";
+import video1 from "../../video/1080HeroCacta.mp4";
 import close from "../../icons/x.svg";
 import "./BlurVideo.css";
 
@@ -21,7 +21,7 @@ export function BlurVideo() {
 	return (
 		<article className="relative max-w-full md:max-w-[85%]">
 			<video
-				className="rounded-lg border app-video "
+				className="rounded-lg border app-video max-w-[58ch]"
 				src={video1}
 				loop
 				muted

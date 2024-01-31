@@ -9,22 +9,20 @@ import bg from "../icons/bg.svg";
 	data-header-color="black"
 	id="us">
 	<article
-		class="z-20 top-0 bottom-0 w-full md:pl-4 md:w-1/2 h-full justify-center items-start
-		flex flex-col content-container">
-
-		<aside class="text-start px-8">
-			<h5>
-				<span class="text-2xl font-bold text-white">Nosotros</span>
-			</h5>
-			<hr />
-			<h6 class="text-xl font-semibold text-white text-balance">
-				Nuestra <span>filosofía</span>
-				se basa en la <span>innovación</span> y<br />la <span
-					>tecnología</span
-				> del agro.
-			</h6>
-		</aside>
+		class="z-20 top-0 bottom-0 w-full md:w-1/2 h-full justify-center items-center text-star
+		flex flex-col">
 		<div class="description-container">
+			<aside class="w-full">
+				<h5>
+					<span class="text-2xl font-bold text-white">Nosotros</span>
+				</h5>
+				<hr />
+				<h6 class="text-xl font-semibold text-white">
+					Somos <span>Cacta, sustentabilidad</span> al alcance de un <span
+						>click.</span
+					>
+				</h6>
+			</aside>
 			<p class="description-item">
 				Nos dedicamos apasionadamente todos los dias a impulsar a las
 				empresas a realizar una transformación hacia una gestión
@@ -40,7 +38,7 @@ import bg from "../icons/bg.svg";
 			</p>
 			<hr class="hr-description" />
 			<p class="description-item">
-				¿Por qué? Como equipo creemos que la sustentabilidad no solo es
+				¿Por que? Como equipo creemos que la sustentabilidad no solo es
 				un objetivo, sino una forma de hacer negocios que beneficia a
 				todas las partes involucradas.
 			</p>
@@ -80,7 +78,7 @@ import bg from "../icons/bg.svg";
 	.hr-description {
 		margin-left: 2rem;
 		height: 1px;
-		width: 65ch;
+		width: 50%;
 		border: none;
 		background: linear-gradient(
 			to left,
@@ -94,21 +92,26 @@ import bg from "../icons/bg.svg";
 		height: 100%;
 		object-fit: cover;
 		object-position: center;
-		mask: radial-gradient(circle at right, white 10%, transparent 100%);
+		mask: radial-gradient(circle at right, white 30%, transparent 100%);
 	}
 	.description-container {
-		min-height: 344px;
-		width: 100%;
 		color: white;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
 		text-align: start;
-		padding: .5rem 0;
 		text-wrap: pretty;
+		max-width: 55ch;
+		backdrop-filter: blur(5px);
+		border-radius: 0.5rem;
+		padding: 0.5rem 1rem;
+		background-color: rgba(255, 255, 255, 0.1);
 	}
 
 	.description-item {
 		font-size: 1rem;
 		text-wrap: pretty;
-		padding: 0.25rem 2rem;
+		padding: 0.25rem 0rem;
 		max-width: 65ch;
 	}
 </style>

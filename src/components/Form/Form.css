@@ -1,9 +1,12 @@
 .form-container {
 	gap: 0.5rem;
 	border-bottom: 1px solid var(--border-line);
-	padding: 2rem 0rem;
+	padding-top: 2rem;
 	flex-wrap: wrap;
-	text-align: start;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 .hr-contact {
 	/* margin-left: 2rem; */
@@ -42,7 +45,7 @@ dialog {
 	align-items: center;
 	justify-content: center;
 	gap: 1rem;
-	padding: 2rem;
+	padding: 1rem;
 	border-radius: 1rem;
 	background: hsl(0 0% 0% / 0.3);
 	flex-wrap: wrap;
@@ -54,13 +57,14 @@ dialog {
 input,
 textarea {
 	width: 100%;
-	padding: 0.5rem;
+	padding: 0.25rem;
 	border-radius: 0.5rem;
 	border: none;
+	color: black;
 }
 textarea {
 	max-height: 10rem;
-	min-height: 5rem;
+	min-height: 8rem;
 }
 @media (width < 1200px) {
 	.form-container-dialog {

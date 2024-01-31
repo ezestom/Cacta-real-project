@@ -18,13 +18,9 @@ export function Form() {
 	};
 
 	return (
-		<div className="relative form-container  z-10 text-white">
-			<h2 className="text-xl font-bold">
-				{" "}
-				Estás preparado para comenzar?{" "}
-			</h2>
+		<div className="relative form-container  z-10 text-white ">
+			<h2 className="text-xl font-bold"> ¿Preparado para comenzar?​ </h2>
 			<hr className="hr-contact" />
-			<p>Sumate a la lista de espera</p>
 			<span className="flex pt-2">
 				<a
 					href="#open-dialog"
@@ -95,14 +91,14 @@ export function Form() {
 									type="email"
 									name="email"
 									id="email"
-									placeholder="john_doe@example.com"
+									placeholder="john_doe@ejemplo.com"
 									required
 								/>
 								<label htmlFor="message">Mensaje</label>
 								<textarea
 									name="message"
 									id="message"
-									placeholder="I would like to join the waitlist"
+									placeholder="Quiero unirme a la lista para recibir noticias sobre el lanzamiento de la App."
 									required></textarea>
 								<button
 									className="w-full bg-white/20 rounded-md py-1 hover:bg-white/30"
