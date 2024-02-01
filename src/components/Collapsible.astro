@@ -1,0 +1,597 @@
+---
+interface Timeline {
+	date1: string;
+	title1: string;
+	description1: string;
+	date2: string;
+	title2: string;
+	description2: string;
+	date3: string;
+	title3: string;
+	description3: string;
+	date4: string;
+	title4: string;
+	description4: string;
+	date5: string;
+	title5: string;
+	description5: string;
+	date6: string;
+	title6: string;
+	description6: string;
+}
+const {
+	date1,
+	title1,
+	description1,
+	date2,
+	title2,
+	description2,
+	date3,
+	title3,
+	description3,
+	date4,
+	title4,
+	description4,
+	date5,
+	title5,
+	description5,
+	date6,
+	title6,
+	description6,
+} = Astro.props;
+---
+
+<div id="timeline" class="timeline">
+	<svg class="hidden">
+		<symbol id="arrow">
+			<polyline
+				color="white"
+				points="7 10,12 15,17 10"
+				fill="none"
+				stroke="currentcolor"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"></polyline>
+		</symbol>
+	</svg>
+
+	<!-- box1 -->
+	<div class="timeline__item">
+		<div class="timeline__item-header">
+			<button
+				class="timeline__arrow"
+				type="button"
+				id="item1"
+				aria-labelledby="item1-name"
+				aria-expanded="false"
+				aria-controls="item1-ctrld"
+				aria-haspopup="true"
+				data-item="1">
+				<svg
+					class="timeline__arrow-icon"
+					viewBox="0 0 24 24"
+					width="24px"
+					height="24px">
+					<use href="#arrow"></use>
+				</svg>
+			</button>
+			<span class="timeline__dot"></span>
+			<span id="item1-name" class="timeline__meta">
+				<time class="timeline__date">{date1}</time><br />
+				<strong class="timeline__title">{title1}</strong>
+			</span>
+		</div>
+		<div
+			class="timeline__item-body"
+			id="item1-ctrld"
+			role="region"
+			aria-labelledby="item1"
+			aria-hidden="true">
+			<div class="timeline__item-body-content">
+				<p class="timeline__item-p">
+					{description1}
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- box2 -->
+	<div class="timeline__item">
+		<div class="timeline__item-header">
+			<button
+				class="timeline__arrow"
+				type="button"
+				id="item2"
+				aria-labelledby="item2-name"
+				aria-expanded="false"
+				aria-controls="item2-ctrld"
+				aria-haspopup="true"
+				data-item="2">
+				<svg
+					class="timeline__arrow-icon"
+					viewBox="0 0 24 24"
+					width="24px"
+					height="24px">
+					<use href="#arrow"></use>
+				</svg>
+			</button>
+			<span class="timeline__dot"></span>
+			<span id="item2-name" class="timeline__meta">
+				<time class="timeline__date" datetime="1973-10-17">{date2}</time
+				><br />
+				<strong class="timeline__title">{title2}</strong>
+			</span>
+		</div>
+		<div
+			class="timeline__item-body"
+			id="item2-ctrld"
+			role="region"
+			aria-labelledby="item2"
+			aria-hidden="true">
+			<div class="timeline__item-body-content">
+				<p class="timeline__item-p">
+					{description2}
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- box3 -->
+	<div class="timeline__item">
+		<div class="timeline__item-header">
+			<button
+				class="timeline__arrow"
+				type="button"
+				id="item3"
+				aria-labelledby="item3-name"
+				aria-expanded="false"
+				aria-controls="item3-ctrld"
+				aria-haspopup="true"
+				data-item="3">
+				<svg
+					class="timeline__arrow-icon"
+					viewBox="0 0 24 24"
+					width="24px"
+					height="24px">
+					<use href="#arrow"></use>
+				</svg>
+			</button>
+			<span class="timeline__dot"></span>
+			<span id="item3-name" class="timeline__meta">
+				<time class="timeline__date" datetime="2001-09-09">{date3}</time
+				><br />
+				<strong class="timeline__title">{title3}</strong>
+			</span>
+		</div>
+		<div
+			class="timeline__item-body mb-2"
+			id="item3-ctrld"
+			role="region"
+			aria-labelledby="item3"
+			aria-hidden="true">
+			<div class="timeline__item-body-content">
+				<p class="timeline__item-p">
+					{description3}
+				</p>
+			</div>
+		</div>
+		<!-- box4 -->
+		<div class="timeline__item">
+			<div class="timeline__item-header">
+				<button
+					class="timeline__arrow"
+					type="button"
+					id="item4"
+					aria-labelledby="item4-name"
+					aria-expanded="false"
+					aria-controls="item4-ctrld"
+					aria-haspopup="true"
+					data-item="4">
+					<svg
+						class="timeline__arrow-icon"
+						viewBox="0 0 24 24"
+						width="24px"
+						height="24px">
+						<use href="#arrow"></use>
+					</svg>
+				</button>
+				<span class="timeline__dot"></span>
+				<span id="item4-name" class="timeline__meta">
+					<time class="timeline__date" datetime="2009-02-13"
+						>{date4}</time
+					><br />
+					<strong class="timeline__title">{title4}</strong>
+				</span>
+			</div>
+			<div
+				class="timeline__item-body"
+				id="item4-ctrld"
+				role="region"
+				aria-labelledby="item4"
+				aria-hidden="true">
+				<div class="timeline__item-body-content">
+					<p class="timeline__item-p">
+						{description4}
+						<a
+							href="https://www.google.com/logos/unix1234567890.gif"
+							target="_blank"
+							rel="noopener">doodle</a
+						> for it.
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- box5 -->
+		<div class="timeline__item">
+			<div class="timeline__item-header">
+				<button
+					class="timeline__arrow"
+					type="button"
+					id="item5"
+					aria-labelledby="item5-name"
+					aria-expanded="false"
+					aria-controls="item5-ctrld"
+					aria-haspopup="true"
+					data-item="5">
+					<svg
+						class="timeline__arrow-icon"
+						viewBox="0 0 24 24"
+						width="24px"
+						height="24px">
+						<use href="#arrow"></use>
+					</svg>
+				</button>
+				<span class="timeline__dot"></span>
+				<span id="item5-name" class="timeline__meta">
+					<time class="timeline__date" datetime="2033-05-18"
+						>{date5}</time
+					><br />
+					<strong class="timeline__title">{title5}</strong>
+				</span>
+			</div>
+			<div
+				class="timeline__item-body"
+				id="item5-ctrld"
+				role="region"
+				aria-labelledby="item5"
+				aria-hidden="true">
+				<div class="timeline__item-body-content">
+					<p class="timeline__item-p">
+						{description5}
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- box6 -->
+		<div class="timeline__item">
+			<div class="timeline__item-header">
+				<button
+					class="timeline__arrow"
+					type="button"
+					id="item6"
+					aria-labelledby="item6-name"
+					aria-expanded="false"
+					aria-controls="item6-ctrld"
+					aria-haspopup="true"
+					data-item="6">
+					<svg
+						class="timeline__arrow-icon"
+						viewBox="0 0 24 24"
+						width="24px"
+						height="24px">
+						<use href="#arrow"></use>
+					</svg>
+				</button>
+				<span class="timeline__dot"></span>
+				<span id="item6-name" class="timeline__meta">
+					<time class="timeline__date" datetime="2038-01-19"
+						>{date6}</time
+					><br />
+					<strong class="timeline__title">{title6}</strong>
+				</span>
+			</div>
+			<div
+				class="timeline__item-body"
+				id="item6-ctrld"
+				role="region"
+				aria-labelledby="item6"
+				aria-hidden="true">
+				<div class="timeline__item-body-content">
+					<p class="timeline__item-p">
+						{description6}
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		window.addEventListener("DOMContentLoaded", () => {
+			const ctl = new CollapsibleTimeline("#timeline");
+		});
+
+		class CollapsibleTimeline {
+			private el: HTMLElement | null;
+			private currentOpenItem: HTMLElement | null;
+			private animation: Animation | undefined;
+
+			constructor(el: string) {
+				this.el = document.querySelector(el);
+				this.currentOpenItem = null;
+				this.animation = undefined;
+				this.init();
+			}
+
+			private init(): void {
+				this.el?.addEventListener("click", this.itemAction.bind(this));
+			}
+
+			private animateItemAction(
+				button: HTMLElement,
+				ctrld: HTMLElement,
+				contentHeight: number,
+				shouldCollapse: boolean
+			): void {
+				const expandedClass = "timeline__item-body--expanded";
+				const animOptions: KeyframeAnimationOptions = {
+					duration: 300,
+					easing: "cubic-bezier(0.65,0,0.35,1)",
+				};
+
+				if (this.currentOpenItem && this.currentOpenItem !== button) {
+					const prevButtonID =
+						this.currentOpenItem.getAttribute("data-item");
+					const prevCtrld = this.el?.querySelector(
+						`#item${prevButtonID}-ctrld`
+					);
+					const prevContentHeight =
+						prevCtrld?.firstElementChild?.offsetHeight || 0;
+
+					this.animateItemAction(
+						this.currentOpenItem,
+						prevCtrld!,
+						prevContentHeight,
+						true
+					);
+				}
+
+				if (shouldCollapse) {
+					button.setAttribute("aria-expanded", "false");
+					ctrld.setAttribute("aria-hidden", "true");
+					ctrld.classList.remove(expandedClass);
+					animOptions.duration *= 2;
+					this.animation = ctrld.animate(
+						[
+							{ height: `${contentHeight}px` },
+							{ height: `${contentHeight}px` },
+							{ height: "0px" },
+						],
+						animOptions
+					);
+				} else {
+					button.setAttribute("aria-expanded", "true");
+					ctrld.setAttribute("aria-hidden", "false");
+					ctrld.classList.add(expandedClass);
+					this.animation = ctrld.animate(
+						[{ height: "0px" }, { height: `${contentHeight}px` }],
+						animOptions
+					);
+				}
+
+				this.currentOpenItem = shouldCollapse ? null : button;
+			}
+
+			private itemAction(e: Event): void {
+				const target = e.target as HTMLElement;
+				const action = target?.getAttribute("data-action");
+				const item = target?.getAttribute("data-item");
+
+				if (action) {
+					const targetExpanded =
+						action === "expand" ? "false" : "true";
+					const buttons = Array.from(
+						this.el?.querySelectorAll(
+							`[aria-expanded="${targetExpanded}"]`
+						) || []
+					);
+					const wasExpanded = action === "collapse";
+
+					for (const button of buttons) {
+						const buttonID = button.getAttribute("data-item");
+						const ctrld = this.el?.querySelector(
+							`#item${buttonID}-ctrld`
+						);
+						const contentHeight =
+							ctrld?.firstElementChild?.offsetHeight || 0;
+
+						this.animateItemAction(
+							button,
+							ctrld!,
+							contentHeight,
+							wasExpanded
+						);
+					}
+				} else if (item) {
+					const button = this.el?.querySelector(
+						`[data-item="${item}"]`
+					);
+					const expanded = button?.getAttribute("aria-expanded");
+
+					if (!expanded) return;
+
+					const wasExpanded = expanded === "true";
+					const ctrld = this.el?.querySelector(`#item${item}-ctrld`);
+					const contentHeight =
+						ctrld?.firstElementChild?.offsetHeight || 0;
+
+					this.animateItemAction(
+						button!,
+						ctrld!,
+						contentHeight,
+						wasExpanded
+					);
+				}
+			}
+		}
+	</script>
+
+	<style>
+		:root {
+			--hue: 223;
+			--bg: hsl(var(--hue), 10%, 90%);
+			--fg: hsl(var(--hue), 10%, 10%);
+			--primary: hsl(var(--hue), 90%, 50%);
+			--trans-dur: 0.3s;
+			--trans-timing: cubic-bezier(0.65, 0, 0.35, 1);
+			/* font-size: calc(16px + (24 - 16) * (100vw - 320px) / (2560 - 320)); */
+		}
+		a {
+			color: var(--primary);
+			transition: color var(--trans-dur);
+		}
+
+		.btn {
+			background-color: var(--fg);
+			border-radius: 0.25em;
+			color: var(--bg);
+			cursor: pointer;
+			padding: 0.375em 0.75em;
+			transition:
+				background-color calc(var(--trans-dur) / 2) linear,
+				color var(--trans-dur);
+			-webkit-tap-highlight-color: transparent;
+		}
+		.btn:hover {
+			background-color: hsl(var(--hue), 10%, 50%);
+		}
+		.btn-group {
+			display: flex;
+			gap: 0.375em;
+			margin-bottom: 1.5em;
+		}
+		.timeline {
+			margin: auto;
+			padding: 0 1.5em;
+			width: 100%;
+			max-width: 36em;
+		}
+		.timeline__arrow {
+			background-color: transparent;
+			border-radius: 0.25em;
+			cursor: pointer;
+			flex-shrink: 0;
+			margin-inline-end: 0.25em;
+			outline: transparent;
+			width: 2em;
+			height: 2em;
+			transition:
+				background-color calc(var(--trans-dur) / 2) linear,
+				color var(--trans-dur);
+			-webkit-appearance: none;
+			appearance: none;
+			-webkit-tap-highlight-color: transparent;
+		}
+		.timeline__arrow:focus-visible,
+		.timeline__arrow:hover {
+			background-color: hsl(var(--hue), 10%, 50%, 0.4);
+		}
+		.timeline__arrow-icon {
+			display: block;
+			pointer-events: none;
+			transform: rotate(-90deg);
+			transition: transform var(--trans-dur) var(--trans-timing);
+			width: 100%;
+			height: auto;
+		}
+		.timeline__date {
+			font-size: 0.75rem;
+			line-height: 2.4;
+		}
+		.timeline__dot {
+			background-color: currentColor;
+			border-radius: 50%;
+			display: inline-block;
+			flex-shrink: 0;
+			margin: 0.625em 0;
+			margin-inline-end: 1em;
+			position: relative;
+			width: 0.75em;
+			height: 0.75em;
+		}
+		.timeline__item {
+			position: relative;
+			padding-bottom: 0.5em;
+		}
+		.timeline__item:not(:last-child):before {
+			background-color: currentColor;
+			content: "";
+			display: block;
+			position: absolute;
+			top: 1em;
+			left: 2.625em;
+			width: 0.125em;
+			height: 100%;
+			transform: translateX(-50%);
+		}
+		[dir="rtl"] .timeline__arrow-icon {
+			transform: rotate(90deg);
+		}
+		[dir="rtl"] .timeline__item:not(:last-child):before {
+			right: 2.625em;
+			left: auto;
+			transform: translateX(50%);
+		}
+		.timeline__item-header {
+			display: flex;
+		}
+		.timeline__item-body {
+			border-radius: 0.375em;
+			overflow: hidden;
+			margin-top: 0.5em;
+			margin-inline-start: 4em;
+			height: 0;
+		}
+		.timeline__item-body-content {
+			/* background-color: hsl(var(--hue), 10%, 50%, 0.3); */
+			color: white;
+			backdrop-filter: blur(20px);
+			background: rgba(0, 0, 0, 0.3);
+			opacity: 0;
+			padding: 0.5em 0.75em;
+			visibility: hidden;
+			transition:
+				opacity var(--trans-dur) var(--trans-timing),
+				visibility var(--trans-dur) steps(1, end);
+		}
+		.timeline__meta {
+			width: 100%;
+			backdrop-filter: blur(20px);
+			border-radius: 0.5rem;
+			padding: 0.5rem 1rem;
+			background-color: hsl(var(--hue), 10%, 50%, 0.3);
+		}
+
+		.timeline__title {
+			font-size: 1rem;
+			color: white;
+		}
+		/* Expanded state */
+		.timeline__item-body--expanded {
+			height: auto;
+		}
+		.timeline__item-body--expanded .timeline__item-body-content {
+			opacity: 1;
+			visibility: visible;
+			transition-delay: var(--trans-dur), 0s;
+		}
+		.timeline__arrow[aria-expanded="true"] .timeline__arrow-icon {
+			transform: rotate(0);
+		}
+
+		/* Dark theme */
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--bg: hsl(var(--hue), 10%, 10%);
+				--fg: hsl(var(--hue), 10%, 90%);
+				--primary: hsl(var(--hue), 90%, 70%);
+			}
+		}
+	</style>
+</div>

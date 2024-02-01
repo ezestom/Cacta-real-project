@@ -43,7 +43,7 @@ export function BlurVideo() {
 						allowFullScreen></iframe>
 
 					<button
-						className="fixed top-20 md:right-20 z-80"
+						className="fixed top-20  z-80"
 						onClick={closeDialog}>
 						<img
 							src={close.src}

@@ -7,6 +7,9 @@ figure:hover {
 	transition: all 0.3s ease-in-out;
 	width: 5em;
 }
+.close-button{
+	width: 3em;
+}
 .youtube:hover,
 .close-button:hover {
 	transform: scale(1.05) translate(0, -2px);

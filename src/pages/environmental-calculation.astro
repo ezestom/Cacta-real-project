@@ -2,13 +2,11 @@
 import { CardZoom } from "../components/CardZoom/CardZoom";
 import Layout from "../layouts/Layout.astro";
 import image1 from "../img/card1.jpg";
+import bg from "../img/cow.jpg";
+import { Image } from "astro:assets";
 ---
 
 <Layout title="Calculo medioambiental" />
-
-<div
-	class="absolute inset-0 -z-10 h-full w-full bg-[#fafafa] bg-[linear-gradient(to_right,#f0f0f0_2px,transparent_2px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
-</div>
 
 <section class="w-screen md:h-screen h-full flex items-center justify-center">
 	<CardZoom
@@ -17,5 +15,10 @@ import image1 from "../img/card1.jpg";
 		preTitle="DATA COLLECTION"
 		title="CALCULO MEDIOAMBIENTAL"
 		description="Vista 360º: Toda tu información centralizada en una sola pantalla (Cambio Climático, Salud Humana, Calidad del Ecosistema y agotamiento de recursos) Permitiendo identificar de forma sencilla los principales contribuyentes de tu huella ambiental."
+	/>
+	<Image
+		src={bg}
+		alt="bg image"
+		class="absolute top-0 left-0 w-full h-full object-cover -z-10"
 	/>
 </section>

@@ -2,13 +2,11 @@
 import { CardZoom } from "../components/CardZoom/CardZoom";
 import Layout from "../layouts/Layout.astro";
 import image3 from "../img/card3.jpg";
+import bg from "../img/cow.jpg";
+import { Image } from "astro:assets";
 ---
 
 <Layout title="Declaraciones ambientales de producto" />
-
-<div
-	class="absolute inset-0 -z-10 h-full w-full bg-[#fafafa] bg-[linear-gradient(to_right,#f0f0f0_2px,transparent_2px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
-</div>
 
 <section class="w-screen md:h-screen h-full flex items-center justify-center">
 	<CardZoom
@@ -17,5 +15,10 @@ import image3 from "../img/card3.jpg";
 		preTitle="DATA COLLECTION"
 		title="DECLARACIONES AMBIENTALES DE PRODUCTO"
 		description="Una declaración ambiental de producto es un documento que proporciona información detallada sobre el ciclo de vida ambiental de un producto. Esta declaración está basada en un análisis completo de los impactos ambientales asociados con la fabricación, el uso y el fin de vida útil del producto."
+	/>
+	<Image
+		src={bg}
+		class="absolute inset-0 w-full h-full object-cover -z-10"
+		alt="bg"
 	/>
 </section>

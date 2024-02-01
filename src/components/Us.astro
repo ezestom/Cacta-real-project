@@ -2,12 +2,36 @@
 import { Image } from "astro:assets";
 import tractor from "../img/farm2.jpg";
 import bg from "../icons/bg.svg";
+import Collapsible from "./Collapsible.astro";
 ---
 
 <section
 	class="w-screen h-screen text-center bg-black/90 relative overflow-hidden text-black z-40 flex justify-start items-center"
 	data-header-color="black"
 	id="us">
+	<div
+		class="absolute top-0 right-0 m-auto bottom-0 z-50 flex items-end justify-end w-1/2">
+		<Collapsible
+			date1="January 1, 1970"
+			title1="Unix Epoch"
+			description1="This is the day the Unix clock began (or December 31, 1969 if you live behind UTC 😉)."
+			date2="October 17, 1973"
+			title2="Digits Within ISO 8601 Format"
+			description2="At 6:36:57 PM UTC, the date in ISO 8601 format (1973-10-17) within the time digits (119731017) appeared for the first time."
+			date3="January 1, 1970"
+			title3="Unix Epoch"
+			description3="This is the day the Unix clock began (or December 31, 1969 if you live behind UTC 😉)."
+			date4="October 17, 1973"
+			title4="Digits Within ISO 8601 Format"
+			description4="At 6:36:57 PM UTC, the date in ISO 8601 format (1973-10-17) within the time digits (119731017) appeared for the first time."
+			date5="January 1, 1970"
+			title5="Unix Epoch"
+			description5="This is the day the Unix clock began (or December 31, 1969 if you live behind UTC 😉)."
+			date6="October 17, 1973"
+			title6="Digits Within ISO 8601 Format"
+			description6="At 6:36:57 PM UTC, the date in ISO 8601 format (1973-10-17) within the time digits (119731017) appeared for the first time."
+		/>
+	</div>
 	<article
 		class="z-20 top-0 bottom-0 w-full md:w-1/2 h-full justify-center items-center text-star
 		flex flex-col">

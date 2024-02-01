@@ -1,6 +1,10 @@
 import "./CardZoom.css";
 
 export function CardZoom({ image, preTitle, title, description }) {
+	const handleBack = (e) => {
+		e.preventDefault();
+		window.history.back();
+	};
 	return (
 		<div class=" mx-40  bg-white border border-gray-200 rounded-lg flex-wrap card">
 			<img
@@ -16,10 +20,13 @@ export function CardZoom({ image, preTitle, title, description }) {
 					{title}
 				</h5>
 
-				<p class="mb-5 text-xl font-normal text-gray-700">{description}</p>
+				<p class="mb-5 text-xl font-normal text-gray-700">
+					{description}
+				</p>
 			</div>
 			<a
-				href="/#features"
+				onClick={handleBack}
+				href="/"
 				class="absolute top-2 right-2 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white  rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 btn-back">
 				<svg
 					class="rotate-180 w-3.5 h-3.5 mr-1"
