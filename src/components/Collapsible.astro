@@ -310,12 +310,12 @@ const {
 		class CollapsibleTimeline {
 			private el: HTMLElement | null;
 			private currentOpenItem: HTMLElement | null;
-			private animation: Animation | undefined;
+			private animation: Animation;
 
 			constructor(el: string) {
 				this.el = document.querySelector(el);
 				this.currentOpenItem = null;
-				this.animation = undefined;
+				this.animation = {} as Animation;
 				this.init();
 			}
 
@@ -340,13 +340,14 @@ const {
 						this.currentOpenItem.getAttribute("data-item");
 					const prevCtrld = this.el?.querySelector(
 						`#item${prevButtonID}-ctrld`
-					);
+					) as HTMLElement;
 					const prevContentHeight =
-						prevCtrld?.firstElementChild?.offsetHeight || 0;
+						(prevCtrld?.firstElementChild as HTMLElement)
+							?.offsetHeight || 0;
 
 					this.animateItemAction(
 						this.currentOpenItem,
-						prevCtrld!,
+						prevCtrld,
 						prevContentHeight,
 						true
 					);
@@ -356,7 +357,7 @@ const {
 					button.setAttribute("aria-expanded", "false");
 					ctrld.setAttribute("aria-hidden", "true");
 					ctrld.classList.remove(expandedClass);
-					animOptions.duration *= 2;
+
 					this.animation = ctrld.animate(
 						[
 							{ height: `${contentHeight}px` },
@@ -390,42 +391,44 @@ const {
 						this.el?.querySelectorAll(
 							`[aria-expanded="${targetExpanded}"]`
 						) || []
-					);
-					const wasExpanded = action === "collapse";
+					) as HTMLElement[];
 
 					for (const button of buttons) {
 						const buttonID = button.getAttribute("data-item");
 						const ctrld = this.el?.querySelector(
 							`#item${buttonID}-ctrld`
-						);
+						) as HTMLElement;
 						const contentHeight =
-							ctrld?.firstElementChild?.offsetHeight || 0;
+							(ctrld?.firstElementChild as HTMLElement)
+								?.offsetHeight || 0;
 
 						this.animateItemAction(
 							button,
-							ctrld!,
+							ctrld,
 							contentHeight,
-							wasExpanded
+							action === "collapse"
 						);
 					}
 				} else if (item) {
 					const button = this.el?.querySelector(
 						`[data-item="${item}"]`
-					);
+					) as HTMLElement;
 					const expanded = button?.getAttribute("aria-expanded");
 
 					if (!expanded) return;
 
-					const wasExpanded = expanded === "true";
-					const ctrld = this.el?.querySelector(`#item${item}-ctrld`);
+					const ctrld = this.el?.querySelector(
+						`#item${item}-ctrld`
+					) as HTMLElement;
 					const contentHeight =
-						ctrld?.firstElementChild?.offsetHeight || 0;
+						(ctrld?.firstElementChild as HTMLElement)
+							?.offsetHeight || 0;
 
 					this.animateItemAction(
 						button!,
 						ctrld!,
 						contentHeight,
-						wasExpanded
+						expanded === "true"
 					);
 				}
 			}
