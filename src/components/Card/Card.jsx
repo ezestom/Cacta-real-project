@@ -31,7 +31,7 @@ export function Card({
 			<div className="h-auto bottom-1 flex justify-center items-center relative">
 				<a
 					href={href}
-					className="absolute h-full bottom-0 -right-20 bg-[#4daa57]/80 transition rounded-lg px-6 text-md font-semibold text-white flex items-center ">
+					className="absolute h-full bottom-0 -right-24 bg-[#4daa57] transition rounded-lg px-8 text-md font-semibold text-white flex items-center ">
 					{" "}
 					Leer más
 				</a>

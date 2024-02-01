@@ -3,7 +3,7 @@ import "./CardZoom.css";
 export function CardZoom({ image, preTitle, title, description }) {
 	const handleBack = (e) => {
 		e.preventDefault();
-		window.history.back();
+		window.location.href = "/#features";
 	};
 	return (
 		<div class=" mx-40  bg-white border border-gray-200 rounded-lg flex-wrap card">
@@ -20,26 +20,11 @@ export function CardZoom({ image, preTitle, title, description }) {
 					{title}
 				</h5>
 
-				<p class="mb-5 text-xl font-normal text-gray-700">
-					{description}
-				</p>
+				<p class="mb-5  font-normal text-gray-700">{description}</p>
 			</div>
 			<a
 				onClick={handleBack}
-				href="/"
-				class="absolute top-2 right-2 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white  rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 btn-back">
-				<svg
-					class="rotate-180 w-3.5 h-3.5 mr-1"
-					aria-hidden="true"
-					fill="none"
-					viewBox="0 0 14 10">
-					<path
-						stroke="currentColor"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M1 5h12m0 0L9 1m4 4L9 9"></path>
-				</svg>{" "}
+				class="absolute top-2 right-2 inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white  rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 btn-back">
 				Volver
 			</a>
 		</div>
