@@ -62,11 +62,7 @@ import { Image } from "astro:assets";
 			muted
 			src={video}></video>
 
-		<Image
-			class="object-cover w-full h-full bg-image opacity-75"
-			src={bg2}
-			alt="bg"
-		/>
+		<Image class="h-full opacity-80 bg-image" src={bg2} alt="bg" />
 	</div>
 
 	<style>
@@ -102,13 +98,6 @@ import { Image } from "astro:assets";
 		@media (width < 768px) {
 			video {
 				display: none;
-			}
-			.bg-image {
-				mask: radial-gradient(
-					circle at right,
-					white 30%,
-					transparent 100%
-				);
 			}
 		}
 	</style>
