@@ -6,11 +6,11 @@ import LandingFooter from "./LandingFooter.astro";
 ---
 
 <section
-	class="w-screen h-screen text-center bg-black/90 relative overflow-hidden  z-40 flex justify-start items-center"
+	class="w-screen h-screen text-center bg-black/90 relative overflow-hidden z-40 flex justify-start items-center"
 	data-header-color="black"
 	id="contact">
 	<article
-		class="z-20 top-0 bottom-0 w-full md:w-1/2 h-full justify-center items-center text-star
+		class="z-20 top-0 bottom-0 w-full md:w-1/2 h-full justify-evenly md:justify-center px-2 md:px-0 items-center text-star
 		flex flex-col">
 		<aside class="text-start aside">
 			<h5>
@@ -26,9 +26,8 @@ import LandingFooter from "./LandingFooter.astro";
 				Prevé el cambio, moldéalo a tu favor.
 			</p>
 		</aside>
-	
-			<Form client:visible />
 
+		<Form client:visible />
 	</article>
 
 	<div class="absolute bottom-0 top-0 h-screen w-full">
@@ -43,6 +42,8 @@ import LandingFooter from "./LandingFooter.astro";
 		border-radius: 0.5rem;
 		padding: 0.5rem 1rem;
 		background-color: rgba(255, 255, 255, 0.1);
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+		filter: brightness(1.1);
 	}
 	.bg-image1 {
 		z-index: -10;
@@ -68,5 +69,10 @@ import LandingFooter from "./LandingFooter.astro";
 	span {
 		color: #4daa57;
 		font-weight: 800;
+	}
+	@media (width < 768px) {
+		.bg-image1 {
+			mask: radial-gradient(circle at right, white 0%, transparent 100%);
+		}
 	}
 </style>

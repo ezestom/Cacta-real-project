@@ -585,13 +585,9 @@ const {
 		.timeline__arrow[aria-expanded="true"] .timeline__arrow-icon {
 			transform: rotate(0);
 		}
-
-		/* Dark theme */
-		@media (prefers-color-scheme: dark) {
-			:root {
-				--bg: hsl(var(--hue), 10%, 10%);
-				--fg: hsl(var(--hue), 10%, 90%);
-				--primary: hsl(var(--hue), 90%, 70%);
+		@media (width < 768px) {
+			#timeline {
+				display: none;
 			}
 		}
 	</style>

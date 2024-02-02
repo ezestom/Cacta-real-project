@@ -14,7 +14,7 @@ import Collapsible from "./Collapsible.astro";
 	data-header-color="black"
 	id="features">
 	<article
-		class="z-20 top-0 md:pl-4 bottom-0 w-full md:w-1/2 h-full justify-center items-center
+		class="z-20 top-0 md:pl-4 bottom-0 w-full px-2 md:px-0 md:w-1/2 h-full justify-center items-center
 		flex flex-col">
 		<aside class="text-start">
 			<div class="blur"></div>
@@ -99,6 +99,8 @@ import Collapsible from "./Collapsible.astro";
 		border-radius: 0.5rem;
 		padding: 0.5rem 1rem;
 		background-color: rgba(255, 255, 255, 0.1);
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+		filter: brightness(1.1);
 	}
 	hr {
 		/* margin-left: 2rem; */
@@ -123,5 +125,10 @@ import Collapsible from "./Collapsible.astro";
 		object-fit: cover;
 		object-position: right;
 		mask: radial-gradient(circle at right, white 50%, transparent 100%);
+	}
+		@media (width < 768px) {
+		.bg-image1 {
+			mask: radial-gradient(circle at right, white 0%, transparent 100%);
+		}
 	}
 </style>

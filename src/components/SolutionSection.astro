@@ -1,12 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import tractor from "../img/tractor5.jpg";
-import { Card } from "../components/Card/Card";
-import app from "../img/test-imag.png";
-// import bg from "../icons/bg.svg";
 import Gallery from "./Gallery.astro";
-import bg1 from "../img/wave-haikei.png";
-import Collapsible from "./Collapsible.astro";
 ---
 
 <section
@@ -14,7 +9,7 @@ import Collapsible from "./Collapsible.astro";
 	data-header-color="black"
 	id="solution">
 	<article
-		class="z-20 top-0 bottom-0 w-full md:w-1/2 h-full justify-center items-center
+		class="z-20 top-0 bottom-0 w-full lg:w-1/2 h-full px-2 p-0 justify-evenly md:justify-center items-center
 		flex flex-col">
 		<aside class="text-start px-8">
 			<h5>
@@ -30,45 +25,6 @@ import Collapsible from "./Collapsible.astro";
 				datos de forma automática, y sencilla.
 			</p>
 		</aside>
-		<!-- <div class="cards-container"> -->
-		<!-- <Card
-				id="1"
-				client:visible
-				imagePath={app.src}
-				altText="Data Collection"
-				preTitle="DATA COLLECTION"
-				title="MONITOREO POR ESTABLECIMIENTO"
-				description="Con el monitoreo por establecimiento obten control total sobre las operaciones, recursos y rendimientos por campo. Además, identifica facilmente problemáticas que pueden surgir en una zona geográfica en particular, facilitando una respuesta para adaptar las soluciones y estrategias de manera más precisa."
-				href="/data-collection"
-			/>
-			<Card
-				id="1"
-				client:visible
-				imagePath={app.src}
-				altText="Data Collection"
-				preTitle="DATA COLLECTION"
-				title="MONITOREO POR PRODUCTO"
-				description="Con el monitoreo por producto obten total trazabilidad del uso de recursos específicos en la producción de tus productos, como materias primas, energía y mano de obra, facilitando la identificación de oportunidades de mejora en términos de eficiencia y sostenibilidad."
-				href="/data-collection"
-			/>
-		</div> -->
-
-		<!-- <footer
-		class="absolute text-md font-semibold m-auto right-0 left-0 inline-block bottom-10 z-40">
-		<a
-			class="p-2 rounded px-6 py-2 backdrop-blur-md bg-white/20 hover:bg-white hover:text-black"
-			href="#">
-			Comienza Gratis</a
-		>
-		<a
-			class="p-2 rounded px-6 py-2 backdrop-blur-md bg-white/20 hover:bg-white hover:text-black"
-			href="#">
-			Comienza Gratis</a
-		>
-	</footer> -->
-		<!-- </div> -->
-		<!-- video -->
-
 		<Gallery />
 	</article>
 	<div class="absolute bottom-0 top-0">
@@ -82,6 +38,8 @@ import Collapsible from "./Collapsible.astro";
 		border-radius: 0.5rem;
 		padding: 0.5rem 1rem;
 		background-color: rgba(255, 255, 255, 0.1);
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+		filter: brightness(1.1);
 	}
 	hr {
 		/* margin-left: 2rem; */
@@ -109,5 +67,10 @@ import Collapsible from "./Collapsible.astro";
 		height: 100%;
 		/*  invert image */
 		transform: scaleX(-1);
+	}
+	@media (width < 768px) {
+		.bg-image1 {
+			mask: radial-gradient(circle at right, white 0%, transparent 100%);
+		}
 	}
 </style>

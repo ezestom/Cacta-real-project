@@ -7,9 +7,9 @@ import { BlurVideo } from "./BlurVideo/BlurVideo";
 <section
 	class="w-screen h-screen text-center bg-black/90 relative overflow-hidden text-black z-40 flex justify-end items-center"
 	data-header-color="black"
-	id="video">
+	id="inmersion">
 	<article
-		class="z-50 top-0 bottom-0 w-full md:w-1/2 h-full justify-center items-center
+		class="z-50 top-0 bottom-0 w-full md:w-1/2 h-full justify-evenly md:justify-center px-2 md:px-0 items-center
 		flex flex-col content-container">
 		<aside class="text-start px-8">
 			<h5>
@@ -40,11 +40,14 @@ import { BlurVideo } from "./BlurVideo/BlurVideo";
 		border-radius: 0.5rem;
 		padding: 0.5rem 1rem;
 		background-color: rgba(255, 255, 255, 0.1);
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+		filter: brightness(1.1);
 	}
 	.bg-image1 {
-		width: 100vw;
+		width: 100%;
 		height: 100%;
 		mask: radial-gradient(circle at left, white 30%, transparent 100%);
+		object-fit: cover;
 	}
 	hr {
 		/* margin-left: 2rem; */
@@ -62,5 +65,11 @@ import { BlurVideo } from "./BlurVideo/BlurVideo";
 	span {
 		color: #4daa57;
 		font-weight: 800;
+	}
+	@media (width < 768px) {
+		.bg-image1 {
+			mask: radial-gradient(circle at right, white 0%, transparent 100%);
+			
+		}
 	}
 </style>

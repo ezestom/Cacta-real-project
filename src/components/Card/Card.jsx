@@ -14,7 +14,7 @@ export function Card({
 			<img
 				src={imagePath}
 				alt={altText}
-				className=" w-full  object-cover "
+				className=" w-full  object-cover object-square"
 			/>
 
 			<div className="p-2 pb-none text-start  ">
@@ -24,7 +24,7 @@ export function Card({
 					{title}
 				</h5>
 
-				<p className=" font-normal text-sm text-pretty text-gray-800 ">
+				<p className=" font-normal text-xs md:text-sm text-pretty text-gray-800 ">
 					{description}
 				</p>
 			</div>

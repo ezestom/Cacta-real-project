@@ -2,13 +2,15 @@
 import video from "../video/1080HeroCacta.mp4";
 import bg from "../icons/bg.svg";
 import DinamicTitle from "./DinamicTitle.astro";
+import bg2 from "../img/man-app-transformed.jpeg";
+import { Image } from "astro:assets";
 ---
 
 <section
 	class="w-screen h-screen text-center bg-black/90 relative overflow-hidden text-white z-40"
 	data-header-color="white">
 	<div
-		class="z-50 absolute m-auto top-0 bottom-0 flex flex-col items-center justify-center w-full md:w-1/2">
+		class="z-50 absolute m-auto top-0 bottom-0 flex flex-col items-center justify-center w-full lg:w-1/2">
 		<span class="block m-auto w-full h1">
 			<header class="header">
 				<!-- svg -->
@@ -22,8 +24,7 @@ import DinamicTitle from "./DinamicTitle.astro";
 				<!-- svg -->
 				<h1 class="text-white text-5xl md:text-6xl font-bold">
 					<strong class="font-semibold">Cacta~Eco</strong><br />
-					<span
-						class="text-6xl md:text-[5rem] font-bold tracking-wider"
+					<span class="text-[5rem] font-bold tracking-wider"
 						>Software</span
 					>
 					<hr />
@@ -61,11 +62,11 @@ import DinamicTitle from "./DinamicTitle.astro";
 			muted
 			src={video}></video>
 
-		<!-- <Image
-			class="object-cover w-full h-full bg-image"
-			src={tractor}
-			alt="Image of tractor"
-		/> -->
+		<Image
+			class="object-cover w-full h-full bg-image opacity-75"
+			src={bg2}
+			alt="bg"
+		/>
 	</div>
 
 	<style>
@@ -97,6 +98,18 @@ import DinamicTitle from "./DinamicTitle.astro";
 			border-radius: 0.25rem;
 			text-align: start;
 			gap: 1.5rem;
+		}
+		@media (width < 768px) {
+			video {
+				display: none;
+			}
+			.bg-image {
+				mask: radial-gradient(
+					circle at right,
+					white 30%,
+					transparent 100%
+				);
+			}
 		}
 	</style>
 </section>

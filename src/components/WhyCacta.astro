@@ -8,7 +8,8 @@ import cloud from "../icons/cloud.svg";
 	class="w-screen h-screen text-center bg-black/90 overflow-hidden text-black flex justify-end items-start relative"
 	data-header-color="black"
 	id="why-cacta">
-	<article class="z-20 w-1/2 h-full flex items-center justify-center">
+	<article
+		class="z-20 lg:w-1/2 h-full flex items-center justify-center px-2 md:px-0">
 		<div class="bullets-container">
 			<aside class="px-8 md:p-0 text-start">
 				<h5>
@@ -133,6 +134,8 @@ import cloud from "../icons/cloud.svg";
 		border-radius: 0.5rem;
 		padding: 0.5rem 1rem;
 		background-color: rgba(255, 255, 255, 0.1);
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+		filter: brightness(1.1);
 	}
 	.bullet-item {
 		display: flex;
@@ -147,11 +150,16 @@ import cloud from "../icons/cloud.svg";
 		font-weight: 500;
 		font-size: 1rem;
 		text-wrap: pretty;
-		margin-left: .5rem;
+		margin-left: 0.5rem;
 	}
 	.bullet-item > span {
 		margin-right: 1rem;
 		font-size: 1.5rem;
 		font-weight: 800;
+	}
+	@media (width < 768px) {
+		.bg-image1 {
+			mask: radial-gradient(circle at right, white 0%, transparent 100%);
+		}
 	}
 </style>
