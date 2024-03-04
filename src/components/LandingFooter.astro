@@ -1,14 +1,13 @@
 ---
-import logo from "/public/logo.png";
-import twitter from "../icons/twitter.svg";
-import linkedin from "../icons/linkedin.svg";
+import logo from "../img/logoTransparente.png";
+import instagram from "../icons/instagram.svg";
 import youtube from "../icons/youtube.svg";
 import world from "../icons/world.svg";
 // import { Image } from "astro:assets";
 ---
 
 <footer
-	class="w-full my-5 flex gap-1 md:justify-between justify-center items-center flex-wrap text-white footer">
+	class="w-full my-5 flex gap-1 md:justify-between justify-around items-center flex-wrap text-white footer">
 	<a
 		target="_blank"
 		href="https://ezestom.github.io/portfolio/"
@@ -27,31 +26,31 @@ import world from "../icons/world.svg";
 	</a>
 	<p class="flex items-center flex-col gap-1 text-center tracking-tighter">
 		<span class="span-footer flex items-center gap-1">
-			<img class="w-9" src={logo.src} alt="logo image" /> © 2024 Cacta-Eco.</span
+			<img class="w-20" src={logo.src} alt="logo image" /> © 2024 Maiko</span
 		>
 
 		<span class="span-footer">All rights reserved.</span>
 	</p>
-	<div class="flex gap-3">
-		<a target="_blank" href="https://www.linkedin.com/in/ezequielstom/">
+	<div class="flex gap-3 items-center justify-center">
+		<!-- <a target="_blank" href="https://www.linkedin.com/in/ezequielstom/">
 			<img
 				class="transition hover:opacity-40"
 				src={twitter.src}
 				alt="twitter icon"
 			/>
-		</a>
-		<a target="_blank" href="https://www.linkedin.com/in/ezequielstom/">
+		</a> -->
+		<a target="_blank" href="https://www.instagram.com/maikofpv/">
 			<img
 				class="transition hover:opacity-40"
-				src={linkedin.src}
-				alt="twitter icon"
+				src={instagram.src}
+				alt="instagram icon"
 			/>
 		</a>
-		<a target="_blank" href="https://www.youtube.com/@ezequielstom6745">
+		<a target="_blank" href="https://www.youtube.com/@maikofpv">
 			<img
 				class="transition hover:opacity-40"
 				src={youtube.src}
-				alt="twitter icon"
+				alt="youtube icon"
 			/>
 		</a>
 	</div>
@@ -65,10 +64,16 @@ import world from "../icons/world.svg";
 		margin: auto;
 		position: absolute;
 		bottom: 0;
-		font-size: .75rem;
+		font-size: 0.75rem;
 	}
 	.span-footer {
 		color: white;
 		font-weight: normal;
+	}
+	@media (width < 768px) {
+		.footer {
+			bottom: 6rem;
+			width: 100%;
+		}
 	}
 </style>

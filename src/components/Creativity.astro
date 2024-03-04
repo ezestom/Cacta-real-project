@@ -1,0 +1,96 @@
+---
+import { Image } from "astro:assets";
+import tractor from "../img/DJI-Inspire-3.jpg";
+import img1 from "../img/Captura-de-pantalla-2023-11-15-a-las-19.46.34.png";
+import { Card } from "../components/Card/Card";
+---
+
+<section
+	class="w-screen h-screen text-center bg-black/90 relative overflow-hidden text-white z-40 flex justify-end items-center my-auto"
+	data-header-color="black"
+	id="creativity">
+	<article
+		class="z-20 top-0 bottom-0 w-full lg:w-1/2 h-full px-2 p-0 justify-center items-center
+		flex flex-col my-auto">
+		<aside class="text-start max-w-[55ch] px-4 md:px-0">
+			<h5>
+				<span class="text-xl md:text-2xl font-bold text-white"
+					>Creatividad en mis proyectos</span
+				>
+			</h5>
+			<hr />
+			<h6 class="text-xl font-semibold text-white">
+				Construye<span> el futuro de tu proyecto</span> para lograr tus objetivos
+				de negocio.
+			</h6>
+			<p class="font-normal text-md text-white text-pretty">
+				La creatividad es una de las herramientas más importantes en el
+				desarrollo de un proyecto. La creatividad es la que nos permite
+				encontrar soluciones a problemas que parecen imposibles de
+				resolver. He creado proyectos de todo tipo, desde pequeñas
+				aplicaciones hasta grandes sistemas de gestión de datos.
+			</p>
+		</aside>
+		<div class="cards-container">
+			<Card
+				id="1"
+				client:visible
+				imagePath={img1.src}
+				altText="Data Collection"
+				preTitle="Creatividad"
+				title="Buscando la performance de exelencia"
+				description="En mis proyectos he utilizado drones para la recolección de datos en tiempo real. Con ellos he logrado obtener información precisa y detallada de los terrenos y cultivos."
+				href="/proyect-x"
+			/>
+		</div>
+	</article>
+	<Image class="bg-image1" src={tractor} alt="Image of drone" />
+</section>
+
+<style>
+	aside {
+		background-image: url("../img/bbblurry.svg");
+		background-size: cover;
+		backdrop-filter: blur(5px);
+		border-radius: 1.5rem;
+		padding: 2rem;
+		border-bottom: 0.1rem solid #09f;
+	}
+	hr {
+		/* margin-left: 2rem; */
+		height: 1px;
+		margin-block: 0.25rem;
+		width: 100%;
+		border: none;
+		background: linear-gradient(
+			to right,
+			transparent 0%,
+			#09f 50%,
+			transparent 100%
+		);
+	}
+	/* celeste super claro =#9ccbee 
+celeste claro opaco = #004173 */
+	span {
+		color: #09f;
+		font-weight: 800;
+	}
+	.bg-image1 {
+		mask: radial-gradient(circle at right, white 30%, transparent 100%);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		min-width: 100vw;
+		object-fit: cover;
+
+		/*  invert image */
+		transform: scaleX(-1);
+	}
+	@media (width < 768px) {
+		.bg-image1 {
+			mask: radial-gradient(circle at right, white 0%, transparent 100%);
+		}
+	}
+</style>

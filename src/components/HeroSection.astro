@@ -1,71 +1,60 @@
 ---
-import video from "../video/1080HeroCacta.mp4";
 import bg from "../icons/bg.svg";
-import DinamicTitle from "./DinamicTitle.astro";
-import bg2 from "../img/man-app-transformed.jpeg";
-import { Image } from "astro:assets";
 ---
 
 <section
 	class="w-screen h-screen text-center bg-black/90 relative overflow-hidden text-white z-40"
 	data-header-color="white">
 	<div
-		class="z-50 absolute m-auto top-0 bottom-0 flex flex-col items-center justify-center w-full lg:w-1/2">
-		<span class="block m-auto w-full h1">
-			<header class="header">
-				<!-- svg -->
+		class="z-50 absolute m-auto top-0 bottom-0 flex flex-col items-center justify-center pb-24 md:p-0 w-full lg:w-1/2">
+		<header
+			class="flex flex-col items-start text-start max-w-md md:max-w-xl text-balance mx-auto gap-1 md:gap-6">
+			<!-- svg -->
 
-				<img
-					class="absolute max-w-[75%] right-0 left-0 top-0 bottom-0 m-auto brightness-200"
-					src={bg.src}
-					alt="bg svg"
-				/>
-
-				<!-- svg -->
-				<h1 class="text-white text-5xl md:text-6xl font-bold">
-					<strong class="font-semibold">Cacta~Eco</strong><br />
-					<span class="text-[5rem] font-bold tracking-wider"
-						>Software</span
-					>
-					<hr />
-				</h1>
-				<h2 class="text-white text-3xl font-semibold">
-					<p class="text-xl">La puerta al futuro de la</p>
-					<p class="text-white text-4xl font-semibold">
-						<span class="font-bold">industria agrícola</span>
-					</p>
-					<DinamicTitle />
-
-					<p class="font-semibold text-xl text-white">
-						el impacto ambiental de tu empresa.
-					</p>
-				</h2>
-			</header>
-		</span>
+			<img
+				class="absolute max-w-[75%] right-0 left-0 top-0 bottom-0 m-auto brightness-200"
+				src={bg.src}
+				alt="bg svg"
+			/>
+			<!-- svg -->
+			<h1 class="text-4xl md:text-5xl font-bold">
+				Descubre el concepto de la creación de contenido
+			</h1>
+			<h2 class="text-xl md:text-3xl">
+				Con la mejor tecnólogia en <span class="font-bold"
+					>Drones FPV</span
+				>
+			</h2>
+			<hr />
+			<h3 class="text-xl md:text-3xl">
+				Sumergete en un mundo de posibilidades y desarrollemos juntos.
+			</h3>
+		</header>
 	</div>
-
-	<!-- <footer
-		class="absolute text-md font-semibold m-auto right-0 left-0 inline-block bottom-10 z-40">
-		<a
-			class="p-2 rounded px-6 py-2 backdrop-blur-md bg-white/20 hover:bg-white hover:text-white"
-			href="#">
-			Comienza Gratis</a
-		>
-	</footer> -->
 
 	<!-- video -->
 	<div class="absolute bottom-0 top-0 h-screen w-full">
-		<video
+		<!-- <video
 			class="object-cover w-full h-full bg-image"
 			autoplay
 			loop
 			muted
-			src={video}></video>
+			src={video}></video> -->
 
-		<Image class="h-full opacity-80 bg-image" src={bg2} alt="bg" />
+		<!-- <Image class="h-full opacity-80 bg-image" src={bg2} alt="bg" /> -->
 	</div>
 
 	<style>
+		header {
+			backdrop-filter: blur(5px);
+			border-radius: 1.5rem;
+			padding: 2rem;
+			background-image: url("../img/bbblurry.svg");
+			background-size: cover;
+			background-position: top;
+			background-repeat: no-repeat;
+		}
+
 		hr {
 			margin: auto;
 			padding: 0.1rem 0;
@@ -75,7 +64,7 @@ import { Image } from "astro:assets";
 			background: linear-gradient(
 				to right,
 				transparent 0%,
-				#4daa57 50%,
+				white 50%,
 				transparent 100%
 			);
 		}
@@ -86,15 +75,9 @@ import { Image } from "astro:assets";
 		.bg-image {
 			object-fit: cover;
 			mask: radial-gradient(circle at right, white 60%, transparent 100%);
+			z-index: -1;
 		}
-		header {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			border-radius: 0.25rem;
-			text-align: start;
-			gap: 1.5rem;
-		}
+
 		@media (width < 768px) {
 			video {
 				display: none;

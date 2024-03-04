@@ -16,7 +16,7 @@ export function CardZoom({ image, preTitle, title, description }) {
 			<div class="p-5 relative w-1/2 h-auto min-w-[400px]">
 				{/* <p class="font-normal text-gray-700">{preTitle}</p> */}
 
-				<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+				<h5 class="mb-2 text-2xl font-bold tracking-tight ">
 					{title}
 				</h5>
 

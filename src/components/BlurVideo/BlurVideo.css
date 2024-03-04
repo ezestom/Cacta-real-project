@@ -1,3 +1,25 @@
+video,
+iframe {
+	border-bottom: 0.1rem solid #09f;
+}
+video {
+	animation: spinner 8s linear infinite;
+}
+@keyframes spinner {
+	25% {
+		filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.5));
+	}
+	50% {
+		filter: drop-shadow(0 0 2rem rgba(255, 255, 255, 0.5));
+	}
+	5% {
+		filter: drop-shadow(0 0 4rem rgba(255, 255, 255, 0.5));
+	}
+	100% {
+		filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+	}
+}
+
 figure:hover {
 	cursor: crosshair;
 }
@@ -5,9 +27,13 @@ figure:hover {
 .youtube,
 .close-button {
 	transition: all 0.3s ease-in-out;
-	width: 5em;
+	margin: auto;
+	position: absolute;
+	width: 3em;
+	z-index: 20;
+	filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
 }
-.close-button{
+.close-button {
 	width: 3em;
 }
 .youtube:hover,
@@ -18,7 +44,7 @@ figure:hover {
 .app-video:hover {
 	cursor: crosshair;
 }
-@media(width < 768px) {
+@media (width < 768px) {
 	.app-video {
 		width: 100%;
 	}

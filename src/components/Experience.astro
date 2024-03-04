@@ -1,0 +1,131 @@
+---
+import { Image } from "astro:assets";
+import img from "../img/manDrone.jpg";
+import cloud from "../icons/cloud.svg";
+---
+
+<section
+	class="w-screen h-screen text-center bg-black/90 overflow-hidden text-black flex relative justify-end"
+	data-header-color="black"
+	id="experience">
+	<article
+		class="z-20 w-full md:w-1/2 h-full flex items-center justify-center px-2 md:p-0">
+		<div class="bullets-container mb-2 ">
+			<aside class="text-start px-4 md:px-0">
+				<h5>
+					<span class="text-2xl font-bold text-white"
+						>Experiencia</span
+					>
+				</h5>
+				<hr />
+				<h6 class="text-xl font-semibold text-white">
+					Mi experiencia con drones fpv es única y de calidad
+				</h6>
+				<p class="font-normal text-white text-pretty max-w-[55ch]">
+					La experiencia de vuelo con drones fpv es única, ya que
+					permite una mayor calidad en la producción de imágenes y
+					videos, así como una mayor precisión en la producción de
+					imágenes y videos.
+				</p>
+			</aside>
+			<ol
+				class="grid grid-cols-1 items-center content-center mt-2 h-full text-start px-2 md:px-0 w-full">
+				<li class="bullet-item">
+					<img src={cloud.src} alt="icon" />
+					<p>
+						<span>Calidad</span> en la producción de imágenes y videos
+					</p>
+				</li>
+				<hr class="hr-li" />
+				<li class="bullet-item">
+					<img src={cloud.src} alt="icon" />
+					<p>
+						<span>Precisión</span> en la producción de imágenes y videos
+					</p>
+				</li>
+			</ol>
+		</div>
+	</article>
+
+	<Image
+		class="absolute w-full h-full object-cover img"
+		src={img}
+		alt="Image of tractor"
+	/>
+</section>
+
+<style>
+	hr {
+		/* margin-left: 2rem; */
+		height: 1px;
+		margin-bottom: 0.5rem;
+		width: 15ch;
+		border: none;
+		background: linear-gradient(
+			to right,
+			transparent 0%,
+			#09f 50%,
+			transparent 100%
+		);
+	}
+	span {
+		color: #09f;
+		font-weight: 800;
+	}
+	.hr-li {
+		margin-left: 2rem;
+		height: 1px;
+		width: 50%;
+		border: none;
+		background: linear-gradient(
+			to left,
+			transparent 0%,
+			#09f 75%,
+			transparent 100%
+		);
+	}
+
+	.bullets-container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		color: white;
+		display: flex;
+		text-wrap: pretty;
+		max-width: 55ch;
+		backdrop-filter: blur(10px);
+		border-radius: 1.5rem;
+		padding: 0.5rem 1rem;
+		background-color: rgba(255, 255, 255, 0.1);
+		border-bottom: 0.1rem solid #09f;
+		padding: 2rem;
+		transform: translateY(5rem);
+	}
+	.bullet-item {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		margin: 1rem 0;
+	}
+
+	.bullet-item > p {
+		color: white;
+		font-weight: 500;
+		font-size: 1rem;
+		text-wrap: pretty;
+		margin-left: 0.5rem;
+	}
+	.bullet-item > span {
+		margin-right: 1rem;
+		font-size: 1.5rem;
+		font-weight: 800;
+	}
+	.img {
+		mask: radial-gradient(circle at left, white 20%, transparent 100%);
+	}
+	@media (width < 1000px) {
+		.bullets-container {
+			padding: 0;
+		}
+	}
+</style>

@@ -1,30 +1,28 @@
 ---
-import Header1 from "../components/LandingHeader.astro";
+import AppHeader from "../components/AppHeader.astro";
 import Layout from "../layouts/Layout.astro";
-import SolutionSection from "../components/SolutionSection.astro";
-import FeaturesSection from "../components/FeaturesSection.astro";
+import Creativity from "../components/Creativity.astro";
+import Services from "../components/Services.astro";
 import HeroSection from "../components/HeroSection.astro";
-import WhyCacta from "../components/WhyCacta.astro";
-import Us from "../components/Us.astro";
+import WhyFpv from "../components/WhyFpv.astro";
+import Inmersion from "../components/Inmersion.astro";
 import Contact from "../components/Contact.astro";
-import Video from "../components/Inmersion.astro";
+import Experience from "../components/Experience.astro";
 import NavbarMobile from "../components/NavbarMobile.astro";
 ---
 
-<Layout title="Welcome to Cacta Software" />
-<Header1 />
+<Layout title="Bienvenido a Maiko fpv Web Oficial" />
+<AppHeader />
 <NavbarMobile />
 <main
 	class="snap-y snap-mandatory relative w-full h-screen overflow-y-auto overflow-hidden scroll-auto">
 	<div class="snap-center"><HeroSection /></div>
-	<div class="snap-center"><SolutionSection /></div>
-	<div class="snap-center"><FeaturesSection /></div>
-	<div class="snap-center"><WhyCacta /></div>
-	<div class="snap-center"><Us /></div>
-	<div class="snap-center"><Video /></div>
+	<div class="snap-center"><Creativity /></div>
+	<div class="snap-center"><Services /></div>
+	<div class="snap-center"><WhyFpv /></div>
+	<div class="snap-center"><Inmersion /></div>
+	<div class="snap-center"><Experience /></div>
 	<div class="snap-center"><Contact /></div>
 </main>
 
-<style>
-	
-</style>
+<style></style>

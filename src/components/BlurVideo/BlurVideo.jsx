@@ -10,18 +10,19 @@ export function BlurVideo() {
 	const openDialog = () => {
 		setIsOpen(true);
 		// stop scroll
-		// document.body.style.overflow = "hidden";
+		document.body.style.overflow = "hidden";
+		console.log("open");
 	};
 	const closeDialog = () => {
 		setIsOpen(false);
 		// enable scroll
-		// document.body.style.overflow = "auto";
+		document.body.style.overflow = "auto";
 	};
 
 	return (
-		<article className="relative max-w-full md:max-w-[85%]">
+		<article className="absolute w-full h-full max-w-full m-auto">
 			<video
-				className="rounded-lg border app-video max-w-[58ch]"
+				className=" absolute right-0 left-0 bottom-0 top-0 m-auto rounded-3xl px-2  app-video md:max-w-[50%] z-20"
 				src={video1}
 				loop
 				muted
@@ -34,16 +35,16 @@ export function BlurVideo() {
 				/>
 			</button>
 			{isOpen && (
-				<dialog open className="z-70">
+				<dialog open className="z-50 ">
 					<iframe
-						className="m-auto w-full p-1 md:w-[50%] aspect-video rounded-lg shadow-2xl"
-						src="https://www.youtube.com/embed/XTH7oeiY2Cg?si=fDqlXkuYmHE4XKDi&autoplay=1"
+						className="m-auto w-full p-1 md:w-[50%] aspect-video rounded-3xl shadow-2xl relative"
+						src="https://www.youtube.com/embed/fv2hsVDW-fU?si=pAw1x73-DRnvHlCO&autoplay=1"
 						title="YouTube video player"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 						allowFullScreen></iframe>
 
 					<button
-						className="fixed top-20  z-80"
+						className=" fixed top-5 w-10 mx-auto z-50"
 						onClick={closeDialog}>
 						<img
 							src={close.src}

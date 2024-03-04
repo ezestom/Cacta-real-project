@@ -1,0 +1,158 @@
+---
+import { Image } from "astro:assets";
+import tractor from "../img/drone-mavic.png";
+import cloud from "../icons/cloud.svg";
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout title="Servicio 1">
+	<section
+		class="w-screen h-screen text-center bg-black/90 overflow-hidden text-black flex justify-end items-center relative"
+		data-header-color="black"
+		id="why-fpv">
+		<span class="absolute top-4 right-2 z-30">
+			<Button href="/#services" name="Volver" />
+		</span>
+
+		<article
+			class="z-20 w-full md:w-1/2 h-full flex items-center justify-center px-2 md:p-0">
+			<div class="bullets-container">
+				<aside class="px-8 md:p-0 text-start">
+					<h5>
+						<span class="text-2xl font-bold text-white"
+							>En el servicio 1</span
+						>
+					</h5>
+					<hr />
+					<h6 class="text-xl font-semibold text-white">
+						Esta basado en la tecnología de drones FPV (First Person
+						View)
+					</h6>
+					<p class="font-normal text-white max-w-[55ch]">
+						La tecnología FPV es una de las más avanzadas en el
+						mercado para la producción de imágenes y videos aéreos.
+						Con esta tecnología se logra una mayor calidad y
+						precisión en la producción de imágenes y videos.
+					</p>
+				</aside>
+				<ol
+					class="grid grid-cols-1 items-center content-center mt-2 h-full text-start px-2 md:px-0 w-full">
+					<li class="bullet-item">
+						<img src={cloud.src} alt="icon" />
+						<p>
+							Los precios de los servicios son <span
+								>accesibles</span
+							>
+						</p>
+					</li>
+					<hr class="hr-li" />
+					<li class="bullet-item">
+						<img src={cloud.src} alt="icon" />
+						<p>
+							Se puede <span>personalizar</span> el servicio según
+							sugerencias y necesidades del cliente
+						</p>
+					</li>
+					<hr class="hr-li" />
+					<li class="bullet-item">
+						<img src={cloud.src} alt="icon" />
+						<p>
+							Se puede <span>personalizar</span> el servicio según
+							las necesidades del cliente
+						</p>
+					</li>
+					<hr class="hr-li" />
+					<li class="bullet-item">
+						<img src={cloud.src} alt="icon" />
+						<p>
+							Se necesita un <span>tiempo de preparación</span> para
+							la realización del servicio
+						</p>
+					</li>
+				</ol>
+			</div>
+		</article>
+		<div class="absolute bottom-0 top-0 h-screen max-w-1/2 w-full">
+			<Image class="bg-image1" src={tractor} alt="Image of drone" />
+		</div>
+	</section>
+
+	<style>
+		hr {
+			/* margin-left: 2rem; */
+			height: 1px;
+			margin-bottom: 0.5rem;
+			width: 15ch;
+			border: none;
+			background: linear-gradient(
+				to right,
+				transparent 0%,
+				#09f 50%,
+				transparent 100%
+			);
+		}
+		span {
+			color: #09f;
+			font-weight: 800;
+		}
+		.hr-li {
+			margin-left: 2rem;
+			height: 1px;
+			width: 50%;
+			border: none;
+			background: linear-gradient(
+				to left,
+				transparent 0%,
+				#09f 75%,
+				transparent 100%
+			);
+		}
+		.bg-image1 {
+			max-width: 50%;
+			object-fit: cover;
+			mask: radial-gradient(circle at left, white 10%, transparent 100%);
+			min-height: 100vh;
+		}
+
+		.bullet-item {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			margin: 1rem 0;
+		}
+
+		.bullet-item > p {
+			color: white;
+			font-weight: 500;
+			font-size: 1rem;
+			text-wrap: pretty;
+			margin-left: 0.5rem;
+		}
+		.bullet-item > span {
+			margin-right: 1rem;
+			font-size: 1.5rem;
+			font-weight: 800;
+		}
+		@media (width < 768px) {
+			.bg-image1 {
+				max-width: 100%;
+			}
+			.bullets-container {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				color: white;
+				display: flex;
+				text-wrap: pretty;
+				max-width: 55ch;
+				backdrop-filter: blur(5px);
+				border-radius: 1.5rem;
+				padding: 0.5rem 1rem;
+				background-image: url("../img/bbblurry.svg");
+				border-bottom: 0.1rem solid #09f;
+				padding: 2rem;
+			}
+		}
+	</style>
+</Layout>

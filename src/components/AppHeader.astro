@@ -1,0 +1,89 @@
+---
+import logo from "../img/logoTransparente.png";
+import Button from "./Button.astro";
+---
+
+<header
+	id="landing-header"
+	class="py-3 px-2 md:px-10 flex items-center fixed top-0 w-full justify-between z-50 text-white">
+	<span class="flex flex-grow basis-0">
+		<a href="/"><img class="w-40" src={logo.src} alt="cacta logo" /></a>
+	</span>
+
+	<nav class="hidden xl:block sm:hidden">
+		<ul
+			class="flex [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-semibold [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
+			<li>
+				<a href="#creativity">Creatividad</a>
+			</li>
+			<li><a href="#services">Servicios</a></li>
+			<li><a href="#why-fpv">¿Por qué Fpv?</a></li>
+			<li><a href="#inmersion">Inmersión</a></li>
+			<li><a href="#experience">Experiencia</a></li>
+		</ul>
+	</nav>
+	<div
+		id="menu-backdrop"
+		class={`
+      absolute bg-[#09f]/20 border border-[#09f]/50 backdrop-blur-lg rounded-xl
+      translate-x-[var(--left)] translate-y-[var(--top)]
+      left-0 top-0
+      w-[var(--width)] h-[var(--height)]
+      transition-all duration-500
+      ease-in-out opacity-0 -z-10
+    `}>
+	</div>
+	<span
+		class="text-md text-current font-medium flex flex-grow justify-end basis-0">
+		<Button href="/#contact" name="Contáctame" />
+	</span>
+</header>
+
+<script>
+	const listItem = document.querySelectorAll("#landing-header li");
+	const menuBackDrop = document.querySelector(
+		"#menu-backdrop"
+	) as HTMLElement;
+
+	listItem.forEach((item) => {
+		item.addEventListener("mouseenter", () => {
+			const { left, top, width, height } = item.getBoundingClientRect();
+
+			menuBackDrop.style.setProperty("--left", `${left}px`);
+			menuBackDrop.style.setProperty("--top", `${top}px`);
+			menuBackDrop.style.setProperty("--width", `${width}px`);
+			menuBackDrop.style.setProperty("--height", `${height}px`);
+
+			menuBackDrop.style.opacity = "1";
+			menuBackDrop.style.visibility = "visible";
+		});
+
+		item.addEventListener("mouseleave", () => {
+			menuBackDrop.style.opacity = "0";
+			menuBackDrop.style.visibility = "hidden";
+		});
+	});
+</script>
+
+<!-- <script>
+	const headerEl = document.querySelector("#landing-header") as HTMLElement;
+
+	const observerOptions = {
+		root: null,
+		rootMargin: "0px", // en cuanto se vea el elemento
+		threshold: 0.9, // porcentaje de visibilidad
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			const { isIntersecting } = entry;
+			if (isIntersecting) {
+				const color = entry.target.getAttribute("data-header-color");
+				headerEl.style.color = color;
+			}
+		});
+	}, observerOptions);
+
+	const sectionElement = document.getElementById("landing-section");
+	sectionElement && observer.observe(sectionElement);
+</script> -->
