@@ -23,11 +23,10 @@ export function Form() {
 			<hr className="hr-contact" />
 			<span className="flex pt-2">
 				<a
-					href="#contact"
+					href="#open-dialog"
 					onClick={openDialog} // Usar la función openDialog aquí
-					id="open-dialog">				
+					id="open-dialog">
 					Ir al formulario
-					
 				</a>
 			</span>
 
@@ -89,7 +88,8 @@ export function Form() {
 									placeholder="ej: Quiero hacer una producción y me gustaría saber más sobre sus servicios, gracias."
 									required></textarea>
 								<button
-									className="w-full bg-white/20 rounded-md py-1 hover:bg-white/30"
+									id="open-dialog"
+									className=" transition rounded-xl px-9 text-base leading-4  text-white flex items-center justify-center "
 									type="submit">
 									Enviar
 								</button>

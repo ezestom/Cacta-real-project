@@ -1,8 +1,8 @@
 import { useState } from "react";
 import youtube from "../../img/youtube.png";
-import video1 from "../../video/1080HeroCacta.mp4";
 import close from "../../icons/x.svg";
 import "./BlurVideo.css";
+import video from "../../video/previewInstitutional.mp4";
 
 export function BlurVideo() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +23,7 @@ export function BlurVideo() {
 		<article className="absolute w-full h-full max-w-full m-auto">
 			<video
 				className=" absolute right-0 left-0 bottom-0 top-0 m-auto rounded-3xl px-2  app-video md:max-w-[50%] z-20"
-				src={video1}
+				src={video}
 				loop
 				muted
 				autoPlay></video>

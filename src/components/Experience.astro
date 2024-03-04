@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import img from "../img/manDrone.jpg";
+import img from "../img/manDrone.webp";
 import cloud from "../icons/cloud.svg";
 ---
 
@@ -121,7 +121,8 @@ import cloud from "../icons/cloud.svg";
 		font-weight: 800;
 	}
 	.img {
-		mask: radial-gradient(circle at left, white 20%, transparent 100%);
+		mask: radial-gradient(circle at left, white 50%, transparent 100%);
+		/* transform: scaleX(-1); */
 	}
 	@media (width < 1000px) {
 		.bullets-container {

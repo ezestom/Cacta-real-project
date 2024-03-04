@@ -1,7 +1,7 @@
 ---
 import Fader from "./Fader.astro";
 import { BlurVideo } from "../components/BlurVideo/BlurVideo";
-// import img from "../img/manDrone.jpg";
+import img from "../img/sky.webp";
 import { Image } from "astro:assets";
 ---
 
@@ -11,39 +11,11 @@ import { Image } from "astro:assets";
 	id="inmersion">
 	<BlurVideo client:visible />
 	<Fader />
-	<!-- <Image
-		class="absolute w-full h-full object-cover"
+	<Image
+		class="absolute w-full h-full object-cover -z-1"
 		src={img}
 		alt="Image of drone"
-	/> -->
+	/>
 </section>
 
-<style>
-	.description-container {
-		color: white;
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		text-align: start;
-		text-wrap: pretty;
-		max-width: 55ch;
-		backdrop-filter: blur(5px);
-		border-radius: 0.5rem;
-		padding: 0.5rem 1rem;
-		background-color: rgba(255, 255, 255, 0.1);
-		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-		filter: brightness(1.1);
-	}
-
-	.description-item {
-		font-size: 1rem;
-		text-wrap: pretty;
-		padding: 0.25rem 0rem;
-		max-width: 65ch;
-	}
-	@media (width < 768px) {
-		.bg-image1 {
-			mask: radial-gradient(circle at right, white 0%, transparent 100%);
-		}
-	}
-</style>
+<style></style>
