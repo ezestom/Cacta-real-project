@@ -2,11 +2,15 @@
 import bg from "../icons/bg.svg";
 import bg2 from "../img/droneMobile.webp";
 import { Image } from "astro:assets";
+import videoHero from "../video/video-hero.mp4";
 ---
 
 <section
-	class="w-screen h-screen text-center bg-black/90 relative overflow-hidden text-white z-40"
+	class="w-screen h-screen text-center bg-black relative overflow-hidden text-white z-40"
 	data-header-color="white">
+	<!-- <Konami /> -->
+	<!-- <SmokeBackground /> -->
+
 	<div
 		class="z-50 absolute m-auto top-0 bottom-0 flex flex-col items-center justify-center pb-24 md:p-0 w-full lg:w-1/2">
 		<header
@@ -19,71 +23,59 @@ import { Image } from "astro:assets";
 				alt="bg svg"
 			/>
 			<!-- svg -->
-			<h1 class="text-4xl md:text-5xl font-bold">
+			<h1 class="text-4xl md:text-4xl font-bold">
 				Descubre el concepto de la creación de contenido
 			</h1>
+			<hr />
 			<h2 class="text-xl md:text-3xl">
 				Con la mejor tecnólogia en <span class="font-bold"
 					>Drones FPV</span
 				>
 			</h2>
-			<hr />
-			<h3 class="text-xl md:text-3xl">
-				Sumergete en un mundo de posibilidades y desarrollemos juntos.
-			</h3>
 		</header>
 	</div>
+	<!-- <LogoAnimation2 class="inset-0" /> -->
 
 	<!-- video -->
 	<div class="absolute bottom-0 top-0 h-screen w-full">
-		<!-- <video
-			class="object-cover w-full h-full bg-image"
+		<video
+			class="object-cover w-full h-full z-100"
 			autoplay
 			loop
 			muted
-			src={video}></video> -->
+			src={videoHero}>
+		</video>
 
-		<Image class="h-full opacity-80 bg-image" src={bg2} alt="bg" />
+		<!-- <Image class="h-full  opacity-80 bg-image" src={bg2} alt="bg" /> -->
 	</div>
-
-	<style>
-		header {
-			backdrop-filter: blur(5px);
-			border-radius: 1.5rem;
-			padding: 2rem;
-			background-image: url("../img/bbblurry.svg");
-			background-size: cover;
-			background-position: top;
-			background-repeat: no-repeat;
-		}
-
-		hr {
-			margin: auto;
-			padding: 0.1rem 0;
-			margin: 0.25rem 0;
-			width: 100%;
-			border: none;
-			background: linear-gradient(
-				to right,
-				transparent 0%,
-				white 50%,
-				transparent 100%
-			);
-		}
-		span {
-			color: var(--color-subtitle);
-		}
-
-		.bg-image {
-			object-fit: cover;
-			mask: radial-gradient(circle at right, white 60%, transparent 100%);
-			z-index: -1;
-		}
-
-		@media (width < 768px) {
-			video {
-				display: none;
-			}
-		}
-	</style>
 </section>
+<style>
+	hr {
+		margin: auto;
+		padding: 0.1rem 0;
+		margin: 0.25rem 0;
+		width: 100%;
+		border: none;
+		background: linear-gradient(
+			to right,
+			transparent 0%,
+			white 50%,
+			transparent 100%
+		);
+	}
+	span {
+		color: var(--color-subtitle);
+	}
+
+	.bg-image {
+		object-fit: cover;
+		mask: radial-gradient(circle at right, white 60%, transparent 100%);
+		z-index: -1;
+	}
+
+	@media (width < 768px) {
+		video {
+			display: none;
+		}
+	}
+</style>

@@ -15,6 +15,7 @@ export function Form() {
 		setDialog(false);
 		document.body.style.overflow = "auto";
 		document.getElementById("landing-header").style.display = "flex";
+		window.location.href = "/#contact";
 	};
 
 	return (

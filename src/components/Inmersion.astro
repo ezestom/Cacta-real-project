@@ -1,18 +1,18 @@
 ---
 import Fader from "./Fader.astro";
 import { BlurVideo } from "../components/BlurVideo/BlurVideo";
-import img from "../img/sky.webp";
+import img from "../img/logo.png";
 import { Image } from "astro:assets";
 ---
 
 <section
-	class="w-screen h-screen text-center bg-black relative overflow-hidden text-black"
+	class="w-screen h-screen text-center bg-black relative overflow-hidden"
 	data-header-color="black"
 	id="inmersion">
 	<BlurVideo client:visible />
 	<Fader />
 	<Image
-		class="absolute w-full h-full object-cover -z-1"
+		class="absolute w-auto h-full object-contain -z-1 opacity-10"
 		src={img}
 		alt="Image of drone"
 	/>

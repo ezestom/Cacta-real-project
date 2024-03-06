@@ -2,7 +2,7 @@ import { useState } from "react";
 import youtube from "../../img/youtube.png";
 import close from "../../icons/x.svg";
 import "./BlurVideo.css";
-import video from "../../video/previewInstitutional.mp4";
+import video from "../../video/video-hero.mp4";
 
 export function BlurVideo() {
 	const [isOpen, setIsOpen] = useState(false);
