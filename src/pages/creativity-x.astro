@@ -10,68 +10,70 @@ import Button from "../components/Button.astro";
 	<section
 		class="w-screen h-screen text-center bg-black/90 overflow-hidden text-black flex justify-end items-center relative"
 		data-header-color="black"
-		id="why-fpv">
+		id="creativity-x">
 		<span class="absolute top-4 right-2 z-30">
-			<Button href="/#services" name="Volver" />
+			<Button href="/#creativity" name="Volver" />
 		</span>
 
 		<article
-			class="z-20 w-full md:w-1/2 h-full flex items-center justify-center px-2 md:p-0">
-			<div class="bullets-container">
-				<aside class="px-8 md:p-0 text-start">
-					<h5>
-						<span class="text-2xl font-bold text-white"
-							>Creatividad X</span
-						>
-					</h5>
-					<hr />
-					<h6 class="text-xl font-semibold text-white">
-						Creando imágenes y videos aéreos con tecnología FPV 
-					</h6>
-					<p class="font-normal text-white max-w-[55ch]">
-						El servicio de Creatividad X es un servicio de grabación
-						de imágenes y videos aéreos con tecnología FPV. Este
-						servicio es ideal para la grabación de eventos, bodas,
-						actividades deportivas, entre otros.
+		class="z-20 w-full lg:w-1/2 h-full flex items-center justify-center px-2 md:p-0 ">
+		<div class="bullets-container">
+			<aside class="px-4 md:px-0 text-start">
+				<h5>
+					<span class="text-2xl font-bold text-white"
+						>Creatividad X</span
+					>
+				</h5>
+				<hr />
+				<h6 class="text-base md:text-xl font-semibold text-white">
+					<span>Es la creatividad</span> la calidad de la producción es mayor
+				</h6>
+				<p
+					class="text-sm md:text-base text-white text-pretty max-w-[55ch]">
+					La tecnología de drones FPV permite una mayor calidad en la
+					producción de imágenes y videos, ya que el piloto puede ver
+					en tiempo real lo que está grabando la cámara del dron. Esto
+					permite una mayor precisión y calidad en la producción de
+					imágenes y videos, lo que es ideal para producciones
+					audiovisuales de alta calidad.
+				</p>
+			</aside>
+			<ol
+				class="grid grid-cols-1 items-center content-center mt-1 md:mt-2 h-full text-start px-4 md:px-0 w-full text-sm md:text-base">
+				<li class="bullet-item">
+					<img src={cloud.src} alt="icon" />
+					<p>
+						<span>Mayor calidad</span> en la producción de imágenes y
+						videos
 					</p>
-				</aside>
-				<ol
-					class="grid grid-cols-1 items-center content-center mt-2 h-full text-start px-2 md:px-0 w-full">
-					<li class="bullet-item">
-						<img src={cloud.src} alt="icon" />
-						<p>
-							Los precios de los servicios son <span
-								>accesibles</span
-							>
-						</p>
-					</li>
-					<hr class="hr-li" />
-					<li class="bullet-item">
-						<img src={cloud.src} alt="icon" />
-						<p>
-							Se puede <span>personalizar</span> el servicio según
-							sugerencias y necesidades del cliente
-						</p>
-					</li>
-					<hr class="hr-li" />
-					<li class="bullet-item">
-						<img src={cloud.src} alt="icon" />
-						<p>
-							Se puede <span>personalizar</span> el servicio según
-							las necesidades del cliente
-						</p>
-					</li>
-					<hr class="hr-li" />
-					<li class="bullet-item">
-						<img src={cloud.src} alt="icon" />
-						<p>
-							Se necesita un <span>tiempo de preparación</span> para
-							la realización del servicio
-						</p>
-					</li>
-				</ol>
-			</div>
-		</article>
+				</li>
+				<hr class="hr-li" />
+				<li class="bullet-item  ">
+					<img src={cloud.src} alt="icon" />
+					<p>
+						<span>Mayor precisión</span> en la producción de imágenes
+						y videos
+					</p>
+				</li>
+				<hr class="hr-li" />
+				<li class="bullet-item">
+					<img src={cloud.src} alt="icon" />
+					<p>
+						<span>Mayor calidad</span> en la producción de imágenes y
+						videos
+					</p>
+				</li>
+				<hr class="hr-li" />
+				<li class="bullet-item">
+					<img src={cloud.src} alt="icon" />
+					<p>
+						<span>Mayor precisión</span> en la producción de imágenes
+						y videos
+					</p>
+				</li>
+			</ol>
+		</div>
+	</article>
 		<div class="absolute bottom-0 top-0 h-screen max-w-1/2 w-full">
 			<Image class="bg-image1" src={drone} alt="Image of drone" />
 		</div>
@@ -118,22 +120,20 @@ import Button from "../components/Button.astro";
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
-			margin: 1rem 0;
+			margin: .5rem 0;
 		}
 
 		.bullet-item > p {
 			color: white;
 			font-weight: 500;
-			font-size: 1rem;
 			text-wrap: pretty;
 			margin-left: 0.5rem;
 		}
 		.bullet-item > span {
 			margin-right: 1rem;
-			font-size: 1.5rem;
 			font-weight: 800;
 		}
-		@media (width < 1000px) {
+		@media (width < 1100px) {
 			.bg-image1 {
 				max-width: 100%;
 			}
@@ -150,8 +150,9 @@ import Button from "../components/Button.astro";
 				padding: 0.5rem 1rem;
 				background-image: url("../img/bbblurry.svg");
 				border-bottom: 0.1rem solid #09f;
-				padding: 2rem;
+				padding: 1rem;
 			}
 		}
+		
 	</style>
 </Layout>

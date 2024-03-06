@@ -17,7 +17,7 @@ export function Card({
 				className=" w-full  object-cover object-square"
 			/> */}
 
-			<div className="p-2 pb-none text-start m-4 ">
+			<div className=" pb-none text-start m-4 ">
 				<p className="font-normal text-white ">{preTitle}</p>
 				<h5 className="  font-bold tracking-tight text-white">
 					{title}
