@@ -44,6 +44,19 @@ figure:hover {
 .app-video:hover {
 	cursor: crosshair;
 }
+.hr {
+	inset: 0;
+	margin: auto;
+	height: 1px;
+	width: 26ch;
+	border: none;
+	background: linear-gradient(
+		to right,
+		transparent 0%,
+		#09f 50%,
+		transparent 100%
+	);
+}
 @media (width < 768px) {
 	.app-video {
 		width: 100%;

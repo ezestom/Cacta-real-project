@@ -21,6 +21,15 @@ export function BlurVideo() {
 
 	return (
 		<article className="absolute w-full h-full max-w-full m-auto">
+			<h5>
+				<a
+					href="https://www.youtube.com/@maikofpv"
+					target="_blank"
+					class="absolute inset-0 top-[16rem] md:top-[13vh] text-[#09f] text-2xl font-bold hover:scale-105 z-10 w-fit h-fit mx-auto transition">
+					<h4>Disfruta mis videos en YouTube</h4>
+					<hr className="hr" />
+				</a>
+			</h5>
 			<video
 				className=" absolute right-0 left-0 bottom-0 top-0 m-auto rounded-3xl px-2  app-video md:max-w-[50%] z-20"
 				src={video}
